@@ -7,17 +7,15 @@ export class GifList extends React.Component {
   static propTypes = {
     gifs: PropTypes.arrayOf(PropTypes.object),
     isLoading: PropTypes.bool,
-    isFetchingMore: PropTypes.bool,
   };
 
   static defaultProps = {
     gifs: [],
     isLoading: false,
-    isFetchingMore: false,
   };
 
   render() {
-    const {gifs, isLoading, isFetchingMore} = this.props;
+    const {gifs, isLoading} = this.props;
 
     if (isLoading) {
       return <Spinner/>;
@@ -29,12 +27,9 @@ export class GifList extends React.Component {
       );
     });
 
-    const fetchingMoreLoader = isFetchingMore ? <Spinner/> : null;
-
     return (
-      <div>
+      <div className="mb-3">
         {gifsElements}
-        {fetchingMoreLoader}
       </div>
     );
   }
