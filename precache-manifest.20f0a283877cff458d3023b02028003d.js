@@ -24,10 +24,6 @@ self.__precacheManifest = [
     "url": "/giphygram/build/static/media/open-iconic.3cf97837.woff"
   },
   {
-    "revision": "527eff645d8ead16666afb6931041279",
-    "url": "/giphygram/build/static/media/open-iconic.527eff64.otf"
-  },
-  {
     "revision": "93cc7aa654ae36b0828716f5ec3159cd",
     "url": "/giphygram/build/static/media/open-iconic.93cc7aa6.ttf"
   },
@@ -38,6 +34,10 @@ self.__precacheManifest = [
   {
     "revision": "eca2c26759a009a4a9361151efe99e74",
     "url": "/giphygram/build/static/media/open-iconic.eca2c267.svg"
+  },
+  {
+    "revision": "527eff645d8ead16666afb6931041279",
+    "url": "/giphygram/build/static/media/open-iconic.527eff64.otf"
   },
   {
     "revision": "5cd19498f2fbfc3b92c6c58a323cc66e",
