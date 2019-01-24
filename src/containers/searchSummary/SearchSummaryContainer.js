@@ -21,6 +21,7 @@ const mapStateToProps = (state) => {
     let total_count = null;
 
     if (
+      state.giphy.isLoading === false &&
       state.giphy.pagination &&
       state.giphy.pagination.hasOwnProperty('total_count')
     ) {
