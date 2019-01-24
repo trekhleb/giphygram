@@ -3,7 +3,7 @@ import { gifItemPropType } from '../../types/giphy';
 
 export class GifItem extends React.Component {
   static propTypes = {
-    gif: gifItemPropType,
+    gif: gifItemPropType.isRequired,
   };
 
   render() {
