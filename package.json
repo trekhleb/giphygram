@@ -2,6 +2,7 @@
   "name": "giphygram",
   "version": "0.0.1",
   "private": false,
+  "homepage": "https://trekhleb.github.io/giphygram/build",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
