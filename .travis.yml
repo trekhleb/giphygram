@@ -1,12 +1,15 @@
+sudo: required
+dist: trusty
 language: node_js
-
 node_js:
-  - 10
-
+  - node
 cache:
   directories:
     - node_modules
-
+install:
+  - npm install
 script:
   - npm run build
   - npm test
+notifications:
+  email: false
