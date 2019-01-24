@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { giphyReducer } from './giphyReducer';
-import { searchReducer } from './searchReducer';
+import { searchParamsReducer } from './searchParamsReducer';
 
 export const rootReducer = combineReducers({
   giphy: giphyReducer,
-  search: searchReducer,
+  searchParams: searchParamsReducer,
 });

@@ -9,12 +9,16 @@ export const defaultSearchParams = {
   lang: 'en',
 };
 
-export const searchReducer = (state = defaultSearchParams, action) => {
+export const searchParamsReducer = (state = defaultSearchParams, action) => {
   switch (action.type) {
 
     case SEARCH_ACTION_TYPES.UPDATE_SEARCH_QUERY:
       const query = action.payload;
       return {...state, query};
+
+    case SEARCH_ACTION_TYPES.UPDATE_OFFSET:
+      const offset = action.payload;
+      return {...state, offset};
 
     default:
       return state;

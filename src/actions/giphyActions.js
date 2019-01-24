@@ -1,4 +1,6 @@
 import { GiphyService } from '../services/GiphyService';
+import { updateOffset } from './searchActions';
+import { GIPHY_BATCH_SIZE } from '../config/system';
 
 export const GIPHY_ACTION_TYPES = {
   GIPHY_SEARCH: 'GIPHY_SEARCH',
@@ -14,8 +16,15 @@ export function giphySearch(searchParams) {
   };
 }
 
-export function giphySearchMore(searchParams) {
-  return (dispatch) => {
+export function giphySearchMore(batchSize = GIPHY_BATCH_SIZE) {
+  return (dispatch, getState) => {
+    const { searchParams } = getState();
+
+    const offset = searchParams.offset + batchSize;
+    searchParams.offset = offset;
+
+    updateOffset(offset)(dispatch);
+
     dispatch({
       type: GIPHY_ACTION_TYPES.GIPHY_SEARCH_MORE,
       payload: GiphyService.search(searchParams)

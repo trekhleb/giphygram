@@ -1,6 +1,6 @@
 import { RequestService } from './RequestService';
 import { GIPHY_API_HOST, GIPHY_API_KEY } from '../config/system';
-import { defaultSearchParams } from '../reducers/searchReducer';
+import { defaultSearchParams } from '../reducers/searchParamsReducer';
 
 export class GiphyService {
   static search({

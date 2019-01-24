@@ -37,7 +37,7 @@ class SearchFormDisconnected extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-      query: state.search.query,
+      query: state.searchParams.query,
     };
 };
 
