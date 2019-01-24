@@ -38,21 +38,24 @@ export class SearchForm extends React.Component {
     return (
       <form className="form-inline" onSubmit={this.onFormSubmit}>
 
-        <input
-          className="form-control"
-          type="search"
-          placeholder="Search GIFs"
-          value={query}
-          onChange={this.onQueryChange}
-        />
+        <div className="input-group">
+          <input
+            className="form-control"
+            type="search"
+            placeholder="Search GIFs"
+            value={query}
+            onChange={this.onQueryChange}
+          />
 
-        <button
-          className="btn btn-outline-light"
-          type="submit"
-          onClick={this.onFormSubmit}
-        >
-          Search
-        </button>
+          <div className="input-group-append">
+            <button
+              className="btn btn-outline-light"
+              type="submit"
+              onClick={this.onFormSubmit}>
+              Search
+            </button>
+          </div>
+        </div>
       </form>
     );
   }
