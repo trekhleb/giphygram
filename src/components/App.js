@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Layout } from './shared/Layout';
+import { Layout } from './shared/layout/Layout';
 import { Routes } from './Routes';
-import { Footer } from './shared/Footer';
-import { Header } from './shared/Header';
+import { Footer } from './shared/footer/Footer';
+import { Header } from './shared/header/Header';
 
 export class App extends React.Component {
   static propTypes = {

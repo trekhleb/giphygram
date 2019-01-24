@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchFormContainer } from '../../containers/searchForm/SearchFormContainer';
+import { SearchFormContainer } from '../../../containers/searchForm/SearchFormContainer';
 
 export class Header extends React.Component {
   render() {
