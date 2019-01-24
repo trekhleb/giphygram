@@ -3,19 +3,19 @@
 [![Build Status](https://travis-ci.org/trekhleb/giphygram.svg?branch=master)](https://travis-ci.org/trekhleb/giphygram)
 [![codecov](https://codecov.io/gh/trekhleb/giphygram/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/giphygram)
 
-[▶︎ Launch Demo](https://trekhleb.github.io/giphygram/)
+This project is front-end React application that serves a sole purpose of searching GIF images on [GIHPY.com](https://giphy.com/) using GIPHY [Search API](https://developers.giphy.com/docs/#search-endpoint).
 
-## Available Scripts
+## Launching the Project
 
-In the project directory, you can run:
+[▶︎ Launch Demo Right in Your Browser](https://trekhleb.github.io/giphygram/) (powered by GitHub Pages)
 
-### `npm start`
+If you want to launch this project locally please clone/checkout this project to your local folder and then you can run:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm start`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This command runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser locally.
+
+The page will reload if you make edits. You will also see any _lint errors_ in the console.
 
 ### `npm test`
 
