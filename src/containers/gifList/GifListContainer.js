@@ -6,20 +6,23 @@ import { GifList } from '../../components/gifList/GifList';
 class GifListDisconnected extends React.Component {
   static propTypes = {
     gifs: PropTypes.arrayOf(PropTypes.object),
+    isLoading: PropTypes.bool,
   };
 
   render() {
-    const {gifs} = this.props;
+    const {gifs, isLoading} = this.props;
 
     return (
-      <GifList gifs={gifs}/>
+      <GifList gifs={gifs} isLoading={isLoading}/>
     );
   }
 }
 
 const mapStateToProps = (store) => {
-  const gifs = store.giphy.data || [];
-  return {gifs};
+  return {
+    gifs: store.giphy.data || [],
+    isLoading: store.giphy.isLoading || false,
+  };
 };
 
 export const GifListContainer = connect(mapStateToProps)(GifListDisconnected);
