@@ -32,7 +32,7 @@ export class SearchForm extends React.Component {
     const {query} = this.props;
 
     return (
-      <form className="form-inline" onSubmit={this.onFormSubmit}>
+      <form className="form" onSubmit={this.onFormSubmit}>
 
         <div className="input-group">
           <input
@@ -45,7 +45,7 @@ export class SearchForm extends React.Component {
 
           <div className="input-group-append">
             <button
-              className="btn btn-outline-light"
+              className="btn btn-dark"
               type="submit"
               onClick={this.onFormSubmit}>
               Search

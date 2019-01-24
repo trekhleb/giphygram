@@ -1,13 +1,16 @@
 import React from 'react';
 import { SearchFormContainer } from '../../../containers/searchForm/SearchFormContainer';
+import './header.css';
 
 export class Header extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark mb-3">
-        <a className="navbar-brand" href="/">GiphyGram</a>
-        <SearchFormContainer/>
-      </nav>
+      <div>
+        <h1 className="text-center italic mt-4 mb-4 logo">GiphyGram</h1>
+        <div className="mb-3">
+          <SearchFormContainer/>
+        </div>
+      </div>
     );
   }
 }
