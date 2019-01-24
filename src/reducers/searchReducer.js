@@ -1,8 +1,9 @@
 import { SEARCH_ACTION_TYPES } from '../actions/searchActions';
+import { GIPHY_BATCH_SIZE } from '../config/system';
 
 export const defaultSearchParams = {
   query: '',
-  limit: 10,
+  limit: GIPHY_BATCH_SIZE,
   offset: 0,
   rating: 'G',
   lang: 'en',
