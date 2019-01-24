@@ -969,8 +969,6 @@ exports[`GifList should be rendered correctly when it is not loading 1`] = `
 </div>
 `;
 
-exports[`GifList should be rendered correctly when it is not loading 2`] = `<Spinner />`;
-
 exports[`GifList should be rendered correctly with empty gifs array 1`] = `
 <div
   className="mb-3"

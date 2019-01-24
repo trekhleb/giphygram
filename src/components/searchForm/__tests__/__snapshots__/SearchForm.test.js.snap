@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should be rendered correctly empty query 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <div
+    className="input-group"
+  >
+    <input
+      className="form-control search-input"
+      onChange={[Function]}
+      placeholder="Search GIFs"
+      type="search"
+      value=""
+    />
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="btn btn-dark"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="oi oi-magnifying-glass"
+        />
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`SearchForm should be rendered correctly non-empty query 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <div
+    className="input-group"
+  >
+    <input
+      className="form-control search-input"
+      onChange={[Function]}
+      placeholder="Search GIFs"
+      type="search"
+      value="kittens"
+    />
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="btn btn-dark"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="oi oi-magnifying-glass"
+        />
+      </button>
+    </div>
+  </div>
+</form>
+`;
