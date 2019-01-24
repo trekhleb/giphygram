@@ -6,7 +6,7 @@ export class Header extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="text-center italic mt-4 mb-4 logo">GiphyGram</h1>
+        <h1 className="text-center italic mt-5 mb-5 logo">GiphyGram</h1>
         <div className="mb-3">
           <SearchFormContainer/>
         </div>

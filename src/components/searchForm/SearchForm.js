@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './searchForm.css';
 
 export class SearchForm extends React.Component {
   static propTypes = {
@@ -36,7 +37,7 @@ export class SearchForm extends React.Component {
 
         <div className="input-group">
           <input
-            className="form-control"
+            className="form-control search-input"
             type="search"
             placeholder="Search GIFs"
             value={query}
