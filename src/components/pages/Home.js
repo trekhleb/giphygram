@@ -1,11 +1,14 @@
 import React from 'react';
+import { SearchForm } from '../searchForm/SearchForm';
+import { GifList } from '../gifList/GifList';
 
 export class Home extends React.Component {
   render() {
     return (
-      <h1>
-        Home
-      </h1>
+      <div>
+        <SearchForm/>
+        <GifList/>
+      </div>
     );
   }
 }

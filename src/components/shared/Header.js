@@ -1,10 +1,10 @@
 import React from 'react';
 
-export class NavigationBar extends React.Component {
+export class Header extends React.Component {
   render() {
     return (
       <div>
-        Navigation Here
+        Header Here
       </div>
     );
   }
