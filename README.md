@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/trekhleb/giphygram.svg?branch=master)](https://travis-ci.org/trekhleb/giphygram)
 
-GitHub Pages demo build https://trekhleb.github.io/giphygram/build/
+[▶︎ Launch Demo](https://trekhleb.github.io/giphygram/)
 
 
 

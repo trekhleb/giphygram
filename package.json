@@ -2,7 +2,7 @@
   "name": "giphygram",
   "version": "0.0.1",
   "private": false,
-  "homepage": "https://trekhleb.github.io/giphygram/build",
+  "homepage": "https://trekhleb.github.io/giphygram",
   "dependencies": {
     "axios": "^0.18.0",
     "open-iconic": "^1.1.1",
@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-test-renderer": "^16.7.0"
   }
 }
