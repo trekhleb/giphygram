@@ -1,5 +1,5 @@
 import { GiphyService } from '../services/GiphyService';
-import { updateOffset } from './searchActions';
+import { updateOffset } from './searchParamsActions';
 import { GIPHY_BATCH_SIZE } from '../config/system';
 
 export const GIPHY_ACTION_TYPES = {

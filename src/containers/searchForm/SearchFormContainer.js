@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { SearchForm } from '../../components/searchForm/SearchForm';
 import { giphySearch } from '../../actions/giphyActions';
-import { updateSearchQuery } from '../../actions/searchActions';
+import { updateSearchQuery } from '../../actions/searchParamsActions';
 
 class SearchFormDisconnected extends React.Component {
   static propTypes = {

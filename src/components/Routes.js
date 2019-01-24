@@ -1,12 +1,10 @@
 import React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { NotFound } from './pages/NotFound';
+import { Home } from './home/Home';
 
 const RoutesRaw = () => (
   <Switch>
-    <Route path='/' exact component={Home}/>
-    <Route component={NotFound}/>
+    <Route path='/' component={Home}/>
   </Switch>
 );
 
