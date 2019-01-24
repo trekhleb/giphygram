@@ -18,9 +18,11 @@ export class SearchSummary extends React.Component {
     }
 
     return (
-      <small>
-        Total results: <span className="badge badge-dark">{total}</span>
-      </small>
+      <div className="mb-3">
+        <small>
+          Total results: <span className="badge badge-dark">{total}</span>
+        </small>
+      </div>
     );
   }
 }

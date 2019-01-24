@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Layout } from './shared/layout/Layout';
 import { Routes } from './Routes';
-import { Footer } from './shared/footer/Footer';
 import { Header } from './shared/header/Header';
 
 export class App extends React.Component {
@@ -21,7 +20,6 @@ export class App extends React.Component {
           <Layout>
             <Header/>
             <Routes/>
-            <Footer/>
           </Layout>
         </BrowserRouter>
       </Provider>

@@ -10,13 +10,16 @@ export class GifItem extends React.Component {
     const {gif} = this.props;
 
     return (
-      <div className="card">
-        <img
-          className="card-img-top"
-          src={gif.images.fixed_width.url}
-          alt={gif.title}
-          title={gif.title}
-        />
+      <div className="card mb-3">
+        <a href={gif.url}>
+          <img
+            border="0"
+            className="card-img-top"
+            src={gif.images.fixed_width.url}
+            alt={gif.title}
+            title={gif.title}
+          />
+        </a>
       </div>
     );
   }
