@@ -3,37 +3,33 @@ import PropTypes from 'prop-types';
 
 export class SearchForm extends React.Component {
   static propTypes = {
+    query: PropTypes.string,
     onSearch: PropTypes.func,
+    onSearchUpdate: PropTypes.func,
   };
 
   static defaultProps = {
+    query: '',
     onSearch: () => {},
+    onSearchUpdate: () => {},
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      query: '',
-    };
-  }
-
   onQueryChange = (event) => {
+    const {onSearchUpdate} = this.props;
     const query = event.target.value;
-    this.setState({query});
+    onSearchUpdate(query);
   };
 
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    const {query} = this.state;
-    const {onSearch} = this.props;
+    const {onSearch, query} = this.props;
 
     onSearch(query);
   };
 
   render() {
-    const {query} = this.state;
+    const {query} = this.props;
 
     return (
       <form className="form-inline" onSubmit={this.onFormSubmit}>

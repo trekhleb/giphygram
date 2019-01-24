@@ -18,9 +18,14 @@ class SearchSummaryDisconnected extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    let total_count = 0;
+    let total_count = null;
 
-    if (state.giphy.pagination && state.giphy.pagination.hasOwnProperty('total_count')) {
+    if (
+      state.giphy.pagination &&
+      state.giphy.pagination.hasOwnProperty('total_count') &&
+      state.search.query &&
+      state.search.query.length
+    ) {
       total_count = state.giphy.pagination.total_count;
     }
 

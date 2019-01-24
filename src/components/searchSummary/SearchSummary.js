@@ -7,20 +7,20 @@ export class SearchSummary extends React.Component {
   };
 
   static defaultProps = {
-    total: 0,
+    total: null,
   };
 
   render() {
     const {total} = this.props;
 
-    if (!total) {
+    if (total === null) {
       return null;
     }
 
     return (
-      <div>
-        Total results: {total}
-      </div>
+      <small>
+        Total results: <span className="badge badge-dark">{total}</span>
+      </small>
     );
   }
 }

@@ -1,8 +1,15 @@
 import { RequestService } from './RequestService';
 import { GIPHY_API_HOST, GIPHY_API_KEY } from '../config/system';
+import { defaultSearchParams } from '../reducers/searchReducer';
 
 export class GiphyService {
-  static search({query = '', limit = 10, offset = 0, rating = 'G', lang = 'en'}) {
+  static search({
+    query = defaultSearchParams.query,
+    limit = defaultSearchParams.limit,
+    offset = defaultSearchParams.offset,
+    rating = defaultSearchParams.rating,
+    lang = defaultSearchParams.lang,
+  } ) {
     const searchParams = {
       api_key: GIPHY_API_KEY,
       q: query,
