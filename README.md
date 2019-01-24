@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/trekhleb/giphygram.svg?branch=master)](https://travis-ci.org/trekhleb/giphygram)
 [![codecov](https://codecov.io/gh/trekhleb/giphygram/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/giphygram)
 
-> This project is a front-end React application that serves a sole purpose of searching GIF images on [GIHPY.com](https://giphy.com/) using GIPHY [Search API](https://developers.giphy.com/docs/#search-endpoint).
+> This project is a front-end React application that serves a sole purpose of searching GIF images on [GIHPY.com](https://giphy.com/) using GIPHY [Search API](https://developers.giphy.com/docs/#search-endpoint). The project is implemented using **React** (as a main UI library), **Redux** (for state management), **React Router** (to establish a possibility to extend the application with new internal routes and pages).
 
 ## Launching the Project
 
@@ -54,3 +54,14 @@ This command will create a production build of the project and will commit and p
 ## Project Continuous Integration
 
 Current project is integrated with [Travis](https://travis-ci.org/trekhleb/giphygram) and [Codecov](https://codecov.io/gh/trekhleb/giphygram) services. Travis service launches project build and tests for every new commit and pull request to make sure that things are not broken. Codecov service reports code coverage percentage to see how reliable and stable the process of development is. 
+
+## ToDo
+
+This list contains the next steps for further project development that have not been completed yet because of limited time that was dedicated to this project.
+
+- [ ] Implement HTTP requests error handling.
+- [ ] Switch to 3-columns views automatically on wide screens.
+- [ ] Optimize huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
+- [ ] Increase code coverage to 100% to increase code stability.
+- [ ] Add multi-environment support using environment variables (to avoid publishing sensitive data to GitHub) and to be able to have different configurations for local/stage/prod environments.
+- [ ] Reflect search params (query and offsets) in the URL to be able to send the link to a friend with predefined search.
