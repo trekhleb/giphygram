@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+// PropType for the Giphy Image entity.
 export const gifImagePropType = PropTypes.shape({
   url: PropTypes.string,
   width: PropTypes.string,
@@ -11,6 +12,7 @@ export const gifImagePropType = PropTypes.shape({
   webp_size: PropTypes.string,
 });
 
+// PropType for the Giphy search result entity.
 export const gifItemPropType = PropTypes.shape({
   title: PropTypes.string,
   _score: PropTypes.number,

@@ -9,6 +9,7 @@ export const defaultSearchParams = {
   lang: 'en',
 };
 
+// Search params reducer is responsible for storing current search parameters (query, offset etc.)
 export const searchParamsReducer = (state = defaultSearchParams, action) => {
   switch (action.type) {
 

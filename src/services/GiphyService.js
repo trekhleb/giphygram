@@ -2,7 +2,9 @@ import { RequestService } from './RequestService';
 import { GIPHY_API_HOST, GIPHY_API_KEY } from '../config/system';
 import { defaultSearchParams } from '../reducers/searchParamsReducer';
 
+// GiphyService is responsible for all integrations with Giphy API.
 export class GiphyService {
+  // Search for GIFs by specific search query.
   static search({
     query = defaultSearchParams.query,
     limit = defaultSearchParams.limit,

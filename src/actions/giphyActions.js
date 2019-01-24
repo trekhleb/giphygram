@@ -7,6 +7,7 @@ export const GIPHY_ACTION_TYPES = {
   GIPHY_SEARCH_MORE: 'GIPHY_SEARCH_MORE',
 };
 
+// Search on GIPHY.
 export function giphySearch(searchParams) {
   return (dispatch) => {
     dispatch({
@@ -16,6 +17,7 @@ export function giphySearch(searchParams) {
   };
 }
 
+// Fetch more search results from GIPHY.
 export function giphySearchMore(batchSize = GIPHY_BATCH_SIZE) {
   return (dispatch, getState) => {
     const { searchParams } = getState();

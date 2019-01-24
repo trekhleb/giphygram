@@ -3,6 +3,7 @@ export const SEARCH_ACTION_TYPES = {
   UPDATE_OFFSET: 'UPDATE_OFFSET',
 };
 
+// Update the value of search query.
 export function updateSearchQuery(searchQuery) {
   return (dispatch) => {
     dispatch({
@@ -12,6 +13,7 @@ export function updateSearchQuery(searchQuery) {
   };
 }
 
+// Update current search offset.
 export function updateOffset(offset) {
   return (dispatch) => {
     return dispatch({

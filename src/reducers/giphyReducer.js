@@ -10,6 +10,7 @@ const initialState = {
   error: null,
 };
 
+// Giphy reducer is responsible for storing information from Giphy API.
 export const giphyReducer = (state = initialState, action) => {
   switch (action.type) {
 
