@@ -50,3 +50,7 @@ npm run deploy
 ```
 
 This command will create a production build of the project and will commit and push the contents of `build` folder to the `gh-pages` branch. Once this branch is set up as a target branch for GitHub pages you'll be able to see project demo similar to the [existing one](https://trekhleb.github.io/giphygram/).
+
+## Project Continuous Integration
+
+Current project is integrated with [Travis](https://travis-ci.org/trekhleb/giphygram) and [Codecov](https://codecov.io/gh/trekhleb/giphygram) services. Travis service launches project build and tests for every new commit and pull request to make sure that things are not broken. Codecov service reports code coverage percentage to see how reliable and stable the process of development is. 
