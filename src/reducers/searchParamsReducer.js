@@ -1,4 +1,4 @@
-import { SEARCH_ACTION_TYPES } from '../actions/searchActions';
+import { SEARCH_ACTION_TYPES } from '../actions/searchParamsActions';
 import { GIPHY_BATCH_SIZE } from '../config/system';
 
 export const defaultSearchParams = {
