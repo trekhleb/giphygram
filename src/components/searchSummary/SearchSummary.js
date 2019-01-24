@@ -13,7 +13,7 @@ export class SearchSummary extends React.Component {
   render() {
     const {total} = this.props;
 
-    if (total === null) {
+    if (!total) {
       return null;
     }
 

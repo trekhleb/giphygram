@@ -22,9 +22,7 @@ const mapStateToProps = (state) => {
 
     if (
       state.giphy.pagination &&
-      state.giphy.pagination.hasOwnProperty('total_count') &&
-      state.search.query &&
-      state.search.query.length
+      state.giphy.pagination.hasOwnProperty('total_count')
     ) {
       total_count = state.giphy.pagination.total_count;
     }
