@@ -27,7 +27,7 @@ describe('GifList', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should be rendered correctly when it is not loading', () => {
+  it('should be rendered correctly when it is loading', () => {
     const gifs = searchResultsMock.data;
     const tree = renderer
       .create(<GifList gifs={gifs} isLoading/>)

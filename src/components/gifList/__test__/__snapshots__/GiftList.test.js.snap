@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GifList should be rendered correctly when it is loading 1`] = `<Spinner />`;
+
 exports[`GifList should be rendered correctly when it is not loading 1`] = `
 <div
   className="mb-3"
