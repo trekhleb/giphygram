@@ -20,7 +20,7 @@ export const giphyReducer = (state = initialState, action) => {
       };
 
     case GIPHY_ACTION_TYPES.GIPHY_SEARCH + '_' + FULFILLED:
-      const { data, pagination, meta } = action.payload;
+      const { data, pagination, meta } = action.payload.data;
 
       return {
         ...state,
