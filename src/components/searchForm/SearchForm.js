@@ -49,7 +49,7 @@ export class SearchForm extends React.Component {
               className="btn btn-dark"
               type="submit"
               onClick={this.onFormSubmit}>
-              Search
+              <span className="oi oi-magnifying-glass"/>
             </button>
           </div>
         </div>
