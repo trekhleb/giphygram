@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './layout.css';
 
 export class Layout extends React.Component {
   static propTypes = {
@@ -10,7 +11,7 @@ export class Layout extends React.Component {
     const {children} = this.props;
 
     return (
-      <div className="container">
+      <div className="container giphygram-container">
         <div className="row">
           <div className="col">
             {children}
