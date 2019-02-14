@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "ci": "npm run lint && npm run test -- --coverage",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run ci && npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
