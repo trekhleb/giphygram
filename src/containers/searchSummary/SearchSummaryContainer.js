@@ -8,29 +8,33 @@ class SearchSummaryDisconnected extends React.Component {
     total: PropTypes.number,
   };
 
+  static defaultProps = {
+    total: 0,
+  };
+
   render() {
-    const {total} = this.props;
+    const { total } = this.props;
 
     return (
-      <SearchSummary total={total}/>
+      <SearchSummary total={total} />
     );
   }
 }
 
 const mapStateToProps = (state) => {
-    let total_count = null;
+  let totalCount = null;
 
-    if (
-      state.giphy.isLoading === false &&
-      state.giphy.pagination &&
-      state.giphy.pagination.hasOwnProperty('total_count')
-    ) {
-      total_count = state.giphy.pagination.total_count;
-    }
+  if (
+    state.giphy.isLoading === false
+    && state.giphy.pagination
+    && Object.prototype.hasOwnProperty.call(state.giphy.pagination, 'total_count')
+  ) {
+    totalCount = state.giphy.pagination.total_count;
+  }
 
-    return {
-      total: total_count
-    };
+  return {
+    total: totalCount,
+  };
 };
 
 export const SearchSummaryContainer = connect(mapStateToProps)(SearchSummaryDisconnected);

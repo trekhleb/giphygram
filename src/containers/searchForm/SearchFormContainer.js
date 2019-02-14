@@ -12,18 +12,22 @@ class SearchFormDisconnected extends React.Component {
     query: PropTypes.string,
   };
 
+  static defaultProps = {
+    query: '',
+  };
+
   onSearch = (query) => {
-    const { giphySearch } = this.props;
-    giphySearch({query});
+    const { giphySearch: giphySearchCallback } = this.props;
+    giphySearchCallback({ query });
   };
 
   onSearchUpdate = (query) => {
-    const { updateSearchQuery } = this.props;
-    updateSearchQuery(query);
+    const { updateSearchQuery: updateSearchQueryCallback } = this.props;
+    updateSearchQueryCallback(query);
   };
 
   render() {
-    const {query} = this.props;
+    const { query } = this.props;
 
     return (
       <SearchForm
@@ -35,11 +39,9 @@ class SearchFormDisconnected extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-    return {
-      query: state.searchParams.query,
-    };
-};
+const mapStateToProps = state => ({
+  query: state.searchParams.query,
+});
 
 const mapDispatchToProps = {
   giphySearch,

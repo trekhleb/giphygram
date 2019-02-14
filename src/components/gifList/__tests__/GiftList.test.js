@@ -14,7 +14,7 @@ jest.mock('../../shared/spinner/Spinner', () => ({
 describe('GifList', () => {
   it('should be rendered correctly with empty gifs array', () => {
     const tree = renderer
-      .create(<GifList gifs={[]} isLoading={false}/>)
+      .create(<GifList gifs={[]} isLoading={false} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +22,7 @@ describe('GifList', () => {
   it('should be rendered correctly when it is not loading', () => {
     const gifs = searchResultsMock.data;
     const tree = renderer
-      .create(<GifList gifs={gifs} isLoading={false}/>)
+      .create(<GifList gifs={gifs} isLoading={false} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -30,7 +30,7 @@ describe('GifList', () => {
   it('should be rendered correctly when it is loading', () => {
     const gifs = searchResultsMock.data;
     const tree = renderer
-      .create(<GifList gifs={gifs} isLoading/>)
+      .create(<GifList gifs={gifs} isLoading />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

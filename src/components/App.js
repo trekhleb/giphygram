@@ -13,14 +13,14 @@ export class App extends React.Component {
   };
 
   render() {
-    const {store} = this.props;
+    const { store } = this.props;
 
     return (
       <Provider store={store}>
         <BrowserRouter>
           <Layout>
-            <Header/>
-            <Routes/>
+            <Header />
+            <Routes />
           </Layout>
         </BrowserRouter>
       </Provider>

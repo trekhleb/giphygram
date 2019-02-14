@@ -12,7 +12,7 @@ export function giphySearch(searchParams) {
   return (dispatch) => {
     dispatch({
       type: GIPHY_ACTION_TYPES.GIPHY_SEARCH,
-      payload: GiphyService.search(searchParams)
+      payload: GiphyService.search(searchParams),
     });
   };
 }
@@ -29,7 +29,7 @@ export function giphySearchMore(batchSize = GIPHY_BATCH_SIZE) {
 
     dispatch({
       type: GIPHY_ACTION_TYPES.GIPHY_SEARCH_MORE,
-      payload: GiphyService.search(searchParams)
+      payload: GiphyService.search(searchParams),
     });
   };
 }

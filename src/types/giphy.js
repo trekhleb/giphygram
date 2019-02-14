@@ -8,7 +8,7 @@ export const gifImagePropType = PropTypes.shape({
   size: PropTypes.string,
   mp4: PropTypes.string,
   mp4_size: PropTypes.string,
-  webp:PropTypes.string,
+  webp: PropTypes.string,
   webp_size: PropTypes.string,
 });
 

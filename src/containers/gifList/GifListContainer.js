@@ -14,35 +14,39 @@ class GifListDisconnected extends React.Component {
     giphySearchMore: PropTypes.func.isRequired,
   };
 
+  static defaultProps = {
+    gifs: [],
+    isLoading: false,
+    isFetchingMore: false,
+  };
+
   onFetchMore = () => {
-    const {isFetchingMore, giphySearchMore} = this.props;
+    const { isFetchingMore, giphySearchMore: giphySearchMoreCallback } = this.props;
 
     if (!isFetchingMore) {
-      giphySearchMore();
+      giphySearchMoreCallback();
     }
   };
 
   render() {
-    const {gifs, isLoading, isFetchingMore} = this.props;
+    const { gifs, isLoading, isFetchingMore } = this.props;
 
-    const fetchMoreSpinner = isFetchingMore ? <Spinner/> : null;
+    const fetchMoreSpinner = isFetchingMore ? <Spinner /> : null;
 
     return (
       <InfiniteScroll onFetchMore={this.onFetchMore}>
-        <GifList gifs={gifs} isLoading={isLoading}/>
+        <GifList gifs={gifs} isLoading={isLoading} />
         {fetchMoreSpinner}
       </InfiniteScroll>
     );
   }
 }
 
-const mapStateToProps = (store) => {
-  return {
-    gifs: store.giphy.data || [],
-    isLoading: store.giphy.isLoading || false,
-    isFetchingMore: store.giphy.isFetchingMore || false,
-  };
-};
+const mapStateToProps = store => ({
+  gifs: store.giphy.data || [],
+  isLoading: store.giphy.isLoading || false,
+  isFetchingMore: store.giphy.isFetchingMore || false,
+});
 
 const mapDispatchToProps = {
   giphySearchMore,

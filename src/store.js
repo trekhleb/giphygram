@@ -12,5 +12,5 @@ const middleware = applyMiddleware(promise(), thunk);
 // Create Redux store for the application.
 export const store = createStore(
   rootReducer,
-  composeEnhancers(middleware)
+  composeEnhancers(middleware),
 );

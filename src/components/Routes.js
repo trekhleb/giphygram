@@ -7,7 +7,7 @@ import { Home } from './home/Home';
 // on the /home and search results on the /search page.
 const RoutesRaw = () => (
   <Switch>
-    <Route path='/' component={Home}/>
+    <Route path="/" component={Home} />
   </Switch>
 );
 

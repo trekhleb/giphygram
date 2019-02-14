@@ -7,9 +7,9 @@ export class RequestService {
   static get(url, params = {}) {
     return axios.get(
       url,
-      {...this.getDefaultAxiosConfig(), params}
+      { ...this.getDefaultAxiosConfig(), params },
     );
-  };
+  }
 
   // Generate default Axios configuration for requests.
   // We may put here default timeouts etc.

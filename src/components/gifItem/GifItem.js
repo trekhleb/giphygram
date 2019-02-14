@@ -7,7 +7,7 @@ export class GifItem extends React.Component {
   };
 
   render() {
-    const {gif} = this.props;
+    const { gif } = this.props;
 
     return (
       <div className="card mb-3">

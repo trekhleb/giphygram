@@ -15,17 +15,15 @@ export class GifList extends React.Component {
   };
 
   render() {
-    const {gifs, isLoading} = this.props;
+    const { gifs, isLoading } = this.props;
 
     if (isLoading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
 
-    const gifsElements = gifs.map((gif) => {
-      return (
-        <GifItem gif={gif} key={gif.id}/>
-      );
-    });
+    const gifsElements = gifs.map(gif => (
+      <GifItem gif={gif} key={gif.id} />
+    ));
 
     return (
       <div className="mb-3">

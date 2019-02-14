@@ -5,7 +5,7 @@ import { Spinner } from '../Spinner';
 describe('Spinner', () => {
   it('should be rendered correctly', () => {
     const tree = renderer
-      .create(<Spinner/>)
+      .create(<Spinner />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

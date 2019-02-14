@@ -18,14 +18,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "lint": "eslint ./src --ext .js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "ci": "npm run lint && npm run test -- --coverage",
+    "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
   },
   "browserslist": [
     ">0.2%",
@@ -34,6 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
     "gh-pages": "^2.0.1",
     "react-test-renderer": "^16.7.0"
   }

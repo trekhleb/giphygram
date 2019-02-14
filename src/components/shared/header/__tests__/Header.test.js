@@ -9,7 +9,7 @@ jest.mock('../../../../containers/searchForm/SearchFormContainer', () => ({
 describe('Header', () => {
   it('should be rendered correctly', () => {
     const tree = renderer
-      .create(<Header/>)
+      .create(<Header />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

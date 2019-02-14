@@ -8,6 +8,6 @@ const rootContainer = document.getElementById('root');
 
 // Render the application.
 ReactDOM.render(
-  <App store={store}/>,
-  rootContainer
+  <App store={store} />,
+  rootContainer,
 );

@@ -6,8 +6,8 @@ export class Home extends React.Component {
   render() {
     return (
       <div>
-        <SearchSummaryContainer/>
-        <GifListContainer/>
+        <SearchSummaryContainer />
+        <GifListContainer />
       </div>
     );
   }

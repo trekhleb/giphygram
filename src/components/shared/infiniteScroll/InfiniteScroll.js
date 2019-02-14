@@ -20,7 +20,7 @@ export class InfiniteScroll extends React.Component {
   }
 
   onScroll = () => {
-    const {activationDistance, onFetchMore} = this.props;
+    const { activationDistance, onFetchMore } = this.props;
 
     const documentHeight = document.body.offsetHeight;
     const scrollHeight = window.innerHeight + window.scrollY;
@@ -31,7 +31,7 @@ export class InfiniteScroll extends React.Component {
   };
 
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
 
     return (
       <div>

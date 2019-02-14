@@ -1,0 +1,10 @@
+{
+  "extends": ["airbnb", "react-app"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off",
+    "react/jsx-filename-extension": ["off", {"extensions": [".js", ".jsx"]}],
+    "react/prefer-stateless-function": ["off", { "ignorePureComponents": true}],
+    "react/forbid-prop-types": ["error", {"forbid": ["any"]}]
+  }
+}

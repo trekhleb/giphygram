@@ -16,7 +16,7 @@ export class SearchForm extends React.Component {
   };
 
   onQueryChange = (event) => {
-    const {onSearchUpdate} = this.props;
+    const { onSearchUpdate } = this.props;
     const query = event.target.value;
     onSearchUpdate(query);
   };
@@ -24,13 +24,13 @@ export class SearchForm extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    const {onSearch, query} = this.props;
+    const { onSearch, query } = this.props;
 
     onSearch(query);
   };
 
   render() {
-    const {query} = this.props;
+    const { query } = this.props;
 
     return (
       <form className="form" onSubmit={this.onFormSubmit}>
@@ -48,8 +48,9 @@ export class SearchForm extends React.Component {
             <button
               className="btn btn-dark"
               type="submit"
-              onClick={this.onFormSubmit}>
-              <span className="oi oi-magnifying-glass"/>
+              onClick={this.onFormSubmit}
+            >
+              <span className="oi oi-magnifying-glass" />
             </button>
           </div>
         </div>

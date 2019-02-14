@@ -11,7 +11,7 @@ export class SearchSummary extends React.Component {
   };
 
   render() {
-    const {total} = this.props;
+    const { total } = this.props;
 
     if (!total) {
       return null;
@@ -20,7 +20,11 @@ export class SearchSummary extends React.Component {
     return (
       <div className="mb-3">
         <small>
-          Total results: <span className="badge badge-dark">{total}</span>
+          Total results:
+          &nbsp;
+          <span className="badge badge-dark">
+            {total}
+          </span>
         </small>
       </div>
     );
