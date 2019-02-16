@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render more than one child component inside the layout 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <div>
+        First child
+      </div>
+      <div>
+        Second child
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render one child component inside the layout 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <div>
+        One and only child
+      </div>
+    </div>
+  </div>
+</div>
+`;
