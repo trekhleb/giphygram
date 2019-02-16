@@ -43,8 +43,8 @@ export class SearchForm extends React.Component {
             value={query}
             onChange={this.onQueryChange}
             spellCheck={false}
-            autoCapitalize={false}
-            autoComplete={false}
+            autoCapitalize="off"
+            autoComplete="off"
             maxLength={inputMaxLength}
           />
 
