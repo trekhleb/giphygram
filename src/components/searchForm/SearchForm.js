@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './searchForm.css';
 
+const inputMaxLength = 512;
+
 export class SearchForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
@@ -23,9 +25,7 @@ export class SearchForm extends React.Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-
     const { onSearch, query } = this.props;
-
     onSearch(query);
   };
 
@@ -39,9 +39,13 @@ export class SearchForm extends React.Component {
           <input
             className="form-control search-input"
             type="search"
-            placeholder="Search GIFs"
+            placeholder="Search for GIFs"
             value={query}
             onChange={this.onQueryChange}
+            spellCheck={false}
+            autoCapitalize={false}
+            autoComplete={false}
+            maxLength={inputMaxLength}
           />
 
           <div className="input-group-append">
