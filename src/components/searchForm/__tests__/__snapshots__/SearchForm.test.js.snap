@@ -9,9 +9,13 @@ exports[`SearchForm should be rendered correctly empty query 1`] = `
     className="input-group"
   >
     <input
+      autoCapitalize="off"
+      autoComplete="off"
       className="form-control search-input"
+      maxLength={512}
       onChange={[Function]}
-      placeholder="Search GIFs"
+      placeholder="Search for GIFs"
+      spellCheck={false}
       type="search"
       value=""
     />
@@ -41,9 +45,13 @@ exports[`SearchForm should be rendered correctly non-empty query 1`] = `
     className="input-group"
   >
     <input
+      autoCapitalize="off"
+      autoComplete="off"
       className="form-control search-input"
+      maxLength={512}
       onChange={[Function]}
-      placeholder="Search GIFs"
+      placeholder="Search for GIFs"
+      spellCheck={false}
       type="search"
       value="kittens"
     />
