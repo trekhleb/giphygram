@@ -6,6 +6,7 @@ import { Routes } from './Routes';
 import { Header } from './shared/header/Header';
 import 'open-iconic/font/css/open-iconic-bootstrap.min.css';
 import { storePropType } from '../types/reduxTypes';
+import { APP_BASE_URL } from '../config/system';
 
 export class App extends React.Component {
   static propTypes = {
@@ -17,7 +18,7 @@ export class App extends React.Component {
 
     return (
       <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename={APP_BASE_URL}>
           <Layout>
             <Header />
             <Routes />
