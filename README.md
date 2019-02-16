@@ -61,6 +61,7 @@ Current project is integrated with [Travis](https://travis-ci.org/trekhleb/giphy
 
 This list contains the next steps for further project development that have not been completed yet because of limited time that was dedicated to this project.
 
+- [ ] Reset search results by clicking on logo.
 - [ ] Implement HTTP requests error handling.
 - [ ] Switch to 3-columns views automatically on wide screens.
 - [ ] Optimize huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
