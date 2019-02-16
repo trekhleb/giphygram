@@ -16,6 +16,10 @@
     "redux-promise-middleware": "^5.1.1",
     "redux-thunk": "^2.3.0"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "lint": "eslint ./src --ext .js",
