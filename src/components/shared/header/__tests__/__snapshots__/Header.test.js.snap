@@ -5,7 +5,13 @@ exports[`Header should be rendered correctly 1`] = `
   <h1
     className="text-center italic mt-5 mb-5 logo"
   >
-    GiphyGram
+    <a
+      className="text-dark"
+      href="/"
+      onClick={[Function]}
+    >
+      GiphyGram
+    </a>
   </h1>
   <div
     className="mb-3"

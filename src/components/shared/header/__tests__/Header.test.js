@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { Header } from '../Header';
 
@@ -9,7 +10,11 @@ jest.mock('../../../../containers/searchForm/SearchFormContainer', () => ({
 describe('Header', () => {
   it('should be rendered correctly', () => {
     const tree = renderer
-      .create(<Header />)
+      .create((
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      ))
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
