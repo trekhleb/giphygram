@@ -1,5 +1,5 @@
 import React from 'react';
-import { gifItemPropType } from '../../types/giphy';
+import { gifItemPropType } from '../../types/giphyTypes';
 
 export class GifItem extends React.Component {
   static propTypes = {
