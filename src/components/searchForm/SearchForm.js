@@ -7,13 +7,13 @@ const inputMaxLength = 512;
 export class SearchForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
-    onSearch: PropTypes.func,
+    onSearchSubmit: PropTypes.func,
     onSearchUpdate: PropTypes.func,
   };
 
   static defaultProps = {
     query: '',
-    onSearch: () => {},
+    onSearchSubmit: () => {},
     onSearchUpdate: () => {},
   };
 
@@ -25,8 +25,8 @@ export class SearchForm extends React.Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    const { onSearch, query } = this.props;
-    onSearch(query);
+    const { onSearchSubmit, query } = this.props;
+    onSearchSubmit(query);
   };
 
   render() {

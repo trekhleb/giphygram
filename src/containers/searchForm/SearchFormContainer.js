@@ -16,7 +16,7 @@ class SearchFormDisconnected extends React.Component {
     query: '',
   };
 
-  onSearch = (query) => {
+  onSearchSubmit = (query) => {
     const { giphySearch: giphySearchCallback } = this.props;
     giphySearchCallback({ query });
   };
@@ -32,7 +32,7 @@ class SearchFormDisconnected extends React.Component {
     return (
       <SearchForm
         query={query}
-        onSearch={this.onSearch}
+        onSearchSubmit={this.onSearchSubmit}
         onSearchUpdate={this.onSearchUpdate}
       />
     );
