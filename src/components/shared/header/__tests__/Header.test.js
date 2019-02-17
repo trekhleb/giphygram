@@ -9,13 +9,12 @@ jest.mock('../../../../containers/searchForm/SearchFormContainer', () => ({
 
 describe('Header', () => {
   it('should be rendered correctly', () => {
-    const tree = renderer
-      .create((
-        <MemoryRouter>
-          <Header />
-        </MemoryRouter>
-      ))
-      .toJSON();
+    const component = renderer.create((
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>
+    ));
+    const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
