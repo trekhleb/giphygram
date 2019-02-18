@@ -23,8 +23,9 @@ exports[`SearchForm should be rendered correctly empty query 1`] = `
       className="input-group-append"
     >
       <button
-        className="btn btn-dark"
+        className="btn btn-dark search-submit"
         onClick={[Function]}
+        title="Search"
         type="submit"
       >
         <span
@@ -59,8 +60,23 @@ exports[`SearchForm should be rendered correctly non-empty query 1`] = `
       className="input-group-append"
     >
       <button
-        className="btn btn-dark"
+        className="btn btn-light search-reset"
         onClick={[Function]}
+        title="Reset search"
+        type="button"
+      >
+        <span
+          className="oi oi-x"
+        />
+      </button>
+    </div>
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="btn btn-dark search-submit"
+        onClick={[Function]}
+        title="Search"
         type="submit"
       >
         <span

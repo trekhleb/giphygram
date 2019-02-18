@@ -9,12 +9,14 @@ export class SearchForm extends React.Component {
     query: PropTypes.string,
     onSearchSubmit: PropTypes.func,
     onSearchUpdate: PropTypes.func,
+    onSearchReset: PropTypes.func,
   };
 
   static defaultProps = {
     query: '',
     onSearchSubmit: () => {},
     onSearchUpdate: () => {},
+    onSearchReset: () => {},
   };
 
   onQueryChange = (event) => {
@@ -23,18 +25,36 @@ export class SearchForm extends React.Component {
     onSearchUpdate(query);
   };
 
-  onFormSubmit = (event) => {
+  onSearchSubmit = (event) => {
     event.preventDefault();
     const { onSearchSubmit, query } = this.props;
     onSearchSubmit(query);
   };
 
+  onSearchReset = (event) => {
+    event.preventDefault();
+    const { onSearchReset } = this.props;
+    onSearchReset();
+  };
+
   render() {
     const { query } = this.props;
 
-    return (
-      <form className="form" onSubmit={this.onFormSubmit}>
+    const resetElement = query && query.length ? (
+      <div className="input-group-append">
+        <button
+          className="btn btn-light search-reset"
+          type="button"
+          onClick={this.onSearchReset}
+          title="Reset search"
+        >
+          <span className="oi oi-x" />
+        </button>
+      </div>
+    ) : null;
 
+    return (
+      <form className="form" onSubmit={this.onSearchSubmit}>
         <div className="input-group">
           <input
             className="form-control search-input"
@@ -48,11 +68,14 @@ export class SearchForm extends React.Component {
             maxLength={inputMaxLength}
           />
 
+          {resetElement}
+
           <div className="input-group-append">
             <button
-              className="btn btn-dark"
+              className="btn btn-dark search-submit"
               type="submit"
-              onClick={this.onFormSubmit}
+              onClick={this.onSearchSubmit}
+              title="Search"
             >
               <span className="oi oi-magnifying-glass" />
             </button>

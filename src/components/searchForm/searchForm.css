@@ -1,4 +1,11 @@
-.search-input:focus {
+.search-input:focus,
+.search-submit:focus {
     border-color: #cccccc;
-    box-shadow: 0 0 0 0.2rem rgba(200, 200, 200, .25)
+    box-shadow: 0 0 0 0.15rem rgba(200, 200, 200, .25)
+}
+
+.search-reset {
+  border-top: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+  border-left: 1px solid #ced4da;
 }

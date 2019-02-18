@@ -26,6 +26,8 @@ class SearchFormDisconnected extends React.Component {
     updateSearchQueryCallback(query);
   };
 
+  onSearchReset = () => {};
+
   render() {
     const { query } = this.props;
 
@@ -34,6 +36,7 @@ class SearchFormDisconnected extends React.Component {
         query={query}
         onSearchSubmit={this.onSearchSubmit}
         onSearchUpdate={this.onSearchUpdate}
+        onSearchReset={this.onSearchReset}
       />
     );
   }
