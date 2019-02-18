@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { SearchForm } from '../../components/searchForm/SearchForm';
 import { giphySearch } from '../../actions/giphyActions';
 import { updateSearchQuery } from '../../actions/searchParamsActions';
+import { getSearchParamsFromState } from '../../reducers/searchParamsReducer';
 
 class SearchFormDisconnected extends React.Component {
   static propTypes = {
@@ -43,7 +44,7 @@ class SearchFormDisconnected extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  query: state.searchParams.query,
+  query: getSearchParamsFromState(state).query,
 });
 
 const mapDispatchToProps = {

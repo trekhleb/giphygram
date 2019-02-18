@@ -1,6 +1,20 @@
 import { ActionType } from 'redux-promise-middleware';
 import { GIPHY_ACTION_TYPES } from '../actions/giphyActions';
 
+/**
+ * @typedef SearchResultsState
+ * @type {object}
+ * @property {*[]} data
+ * @property {object} pagination
+ * @property {object} meta
+ * @property {boolean} isLoading
+ * @property {boolean} isFetchingMore
+ * @property {object} error
+ */
+
+/**
+ * @type {SearchResultsState}
+ */
 const initialState = {
   data: [],
   pagination: {},
@@ -11,7 +25,7 @@ const initialState = {
 };
 
 // Giphy reducer is responsible for storing information from Giphy API.
-export const giphyReducer = (state = initialState, action) => {
+export const searchResultsReducer = (state = initialState, action) => {
   const payloadData = (action.payload && action.payload.data) || null;
 
   switch (action.type) {
@@ -71,3 +85,13 @@ export const giphyReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+/**
+ * Extracts search results from the store.
+ * This is a helper function that allows us to change store structure easily
+ * without changing the components.
+ *
+ * @param {object} state
+ * @return {SearchResultsState}
+ */
+export const getSearchResultsFromState = state => state.searchResults;

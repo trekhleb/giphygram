@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { SearchSummary } from '../../components/searchSummary/SearchSummary';
+import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
 
 class SearchSummaryDisconnected extends React.Component {
   static propTypes = {
@@ -22,14 +23,15 @@ class SearchSummaryDisconnected extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  const searchResults = getSearchResultsFromState(state);
   let totalCount = null;
 
   if (
-    state.giphy.isLoading === false
-    && state.giphy.pagination
-    && Object.prototype.hasOwnProperty.call(state.giphy.pagination, 'total_count')
+    searchResults.isLoading === false
+    && searchResults.pagination
+    && Object.prototype.hasOwnProperty.call(searchResults.pagination, 'total_count')
   ) {
-    totalCount = state.giphy.pagination.total_count;
+    totalCount = searchResults.pagination.total_count;
   }
 
   return {

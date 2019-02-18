@@ -5,6 +5,7 @@ import { GifList } from '../../components/gifList/GifList';
 import { InfiniteScroll } from '../../components/shared/infiniteScroll/InfiniteScroll';
 import { Spinner } from '../../components/shared/spinner/Spinner';
 import { giphySearchMore } from '../../actions/giphyActions';
+import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
 
 class GifListDisconnected extends React.Component {
   static propTypes = {
@@ -42,11 +43,15 @@ class GifListDisconnected extends React.Component {
   }
 }
 
-const mapStateToProps = store => ({
-  gifs: store.giphy.data || [],
-  isLoading: store.giphy.isLoading || false,
-  isFetchingMore: store.giphy.isFetchingMore || false,
-});
+const mapStateToProps = (state) => {
+  const searchResults = getSearchResultsFromState(state);
+
+  return {
+    gifs: searchResults.data || [],
+    isLoading: searchResults.isLoading || false,
+    isFetchingMore: searchResults.isFetchingMore || false,
+  };
+};
 
 const mapDispatchToProps = {
   giphySearchMore,
