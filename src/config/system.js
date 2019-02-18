@@ -11,4 +11,4 @@ export const GIPHY_API_KEY = env.REACT_APP_GIPHY_API_KEY;
 export const GIPHY_API_HOST = env.REACT_APP_GIPHY_API_HOST;
 
 // How many Gif images we want to request per each HTTP request.
-export const GIPHY_BATCH_SIZE = env.REACT_APP_GIPHY_BATCH_SIZE;
+export const SEARCH_BATCH_SIZE = 30;
