@@ -29,6 +29,9 @@ export const searchResultsReducer = (state = initialState, action) => {
   const payloadData = (action.payload && action.payload.data) || null;
 
   switch (action.type) {
+    case SEARCH_ACTION_TYPES.SEARCH_RESET:
+      return { ...initialState };
+
     case `${SEARCH_ACTION_TYPES.SEARCH}_${ActionType.Pending}`:
       return {
         ...state,

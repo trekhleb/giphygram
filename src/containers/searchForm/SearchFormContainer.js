@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { SearchForm } from '../../components/searchForm/SearchForm';
-import { search } from '../../actions/searchActions';
+import { search, searchReset } from '../../actions/searchActions';
 import { updateSearchQuery } from '../../actions/searchParamsActions';
 import { getSearchParamsFromState } from '../../reducers/searchParamsReducer';
 
 class SearchFormDisconnected extends React.Component {
   static propTypes = {
     search: PropTypes.func.isRequired,
+    searchReset: PropTypes.func.isRequired,
     updateSearchQuery: PropTypes.func.isRequired,
     query: PropTypes.string,
   };
@@ -27,7 +28,10 @@ class SearchFormDisconnected extends React.Component {
     updateSearchQueryCallback(query);
   };
 
-  onSearchReset = () => {};
+  onSearchReset = () => {
+    const { searchReset: searchResetCallback } = this.props;
+    searchResetCallback();
+  };
 
   render() {
     const { query } = this.props;
@@ -49,6 +53,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   search,
+  searchReset,
   updateSearchQuery,
 };
 
