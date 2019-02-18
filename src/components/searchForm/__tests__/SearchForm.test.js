@@ -20,11 +20,11 @@ describe('SearchForm', () => {
   it('should fire onSearchSubmit form callback', () => {
     // Mock search form parameters.
     const searchQuery = 'kittens';
-    const onSubmit = jest.fn();
+    const onSearchSubmit = jest.fn();
 
     // Create test component instance.
     const testComponentInstance = renderer.create((
-      <SearchForm query={searchQuery} onSearchSubmit={onSubmit} />
+      <SearchForm query={searchQuery} onSearchSubmit={onSearchSubmit} />
     )).root;
 
     // Try to find submit button inside the form.
@@ -38,21 +38,21 @@ describe('SearchForm', () => {
     const eventMock = { preventDefault: jest.fn() };
     submitButtonInstance.props.onClick(eventMock);
 
-    expect(onSubmit).toHaveBeenCalledTimes(1);
-    expect(onSubmit).toHaveBeenCalledWith(searchQuery);
+    expect(onSearchSubmit).toHaveBeenCalledTimes(1);
+    expect(onSearchSubmit).toHaveBeenCalledWith(searchQuery);
   });
 
   it('should fire onSearchReset form callback', () => {
     // Mock search form parameters.
     const searchQuery = 'kittens';
-    const onReset = jest.fn();
+    const onSearchReset = jest.fn();
 
     // Create test component instance.
     const testComponentInstance = renderer.create((
-      <SearchForm query={searchQuery} onSearchReset={onReset} />
+      <SearchForm query={searchQuery} onSearchReset={onSearchReset} />
     )).root;
 
-    // Try to find submit button inside the form.
+    // Try to find reset button inside the form.
     const resetButtonInstance = testComponentInstance.findByProps({
       type: 'button',
     });
@@ -61,6 +61,35 @@ describe('SearchForm', () => {
     const eventMock = { preventDefault: jest.fn() };
     resetButtonInstance.props.onClick(eventMock);
 
-    expect(onReset).toHaveBeenCalledTimes(1);
+    expect(onSearchReset).toHaveBeenCalledTimes(1);
+  });
+
+  it('should fire onChange form callback', () => {
+    // Mock search form parameters.
+    const initialSearchQuery = 'kittens';
+    const updatedSearchQuery = 'dogs';
+    const onSearchUpdate = jest.fn();
+
+    // Create test component instance.
+    const testComponentInstance = renderer.create((
+      <SearchForm query={initialSearchQuery} onSearchUpdate={onSearchUpdate} />
+    )).root;
+
+    // Try to find search input inside the form.
+    const searchInputInstance = testComponentInstance.findByProps({
+      type: 'search',
+    });
+    expect(searchInputInstance).toBeDefined();
+
+    const eventMock = {
+      preventDefault: jest.fn(),
+      target: {
+        value: updatedSearchQuery,
+      },
+    };
+    searchInputInstance.props.onChange(eventMock);
+
+    expect(onSearchUpdate).toHaveBeenCalledTimes(1);
+    expect(onSearchUpdate).toHaveBeenLastCalledWith(updatedSearchQuery);
   });
 });
