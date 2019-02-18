@@ -1,5 +1,5 @@
 import { ActionType } from 'redux-promise-middleware';
-import { GIPHY_ACTION_TYPES } from '../actions/giphyActions';
+import { SEARCH_ACTION_TYPES } from '../actions/searchActions';
 
 /**
  * @typedef SearchResultsState
@@ -29,7 +29,7 @@ export const searchResultsReducer = (state = initialState, action) => {
   const payloadData = (action.payload && action.payload.data) || null;
 
   switch (action.type) {
-    case `${GIPHY_ACTION_TYPES.GIPHY_SEARCH}_${ActionType.Pending}`:
+    case `${SEARCH_ACTION_TYPES.SEARCH}_${ActionType.Pending}`:
       return {
         ...state,
         isLoading: true,
@@ -37,7 +37,7 @@ export const searchResultsReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case `${GIPHY_ACTION_TYPES.GIPHY_SEARCH_MORE}_${ActionType.Pending}`:
+    case `${SEARCH_ACTION_TYPES.SEARCH_MORE}_${ActionType.Pending}`:
       return {
         ...state,
         isLoading: false,
@@ -45,7 +45,7 @@ export const searchResultsReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case `${GIPHY_ACTION_TYPES.GIPHY_SEARCH}_${ActionType.Fulfilled}`:
+    case `${SEARCH_ACTION_TYPES.SEARCH}_${ActionType.Fulfilled}`:
       return {
         ...state,
         data: payloadData.data,
@@ -56,7 +56,7 @@ export const searchResultsReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case `${GIPHY_ACTION_TYPES.GIPHY_SEARCH_MORE}_${ActionType.Fulfilled}`:
+    case `${SEARCH_ACTION_TYPES.SEARCH_MORE}_${ActionType.Fulfilled}`:
       return {
         ...state,
         data: [...state.data].concat(payloadData.data),
@@ -67,13 +67,13 @@ export const searchResultsReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case `${GIPHY_ACTION_TYPES.GIPHY_SEARCH}_${ActionType.Rejected}`:
+    case `${SEARCH_ACTION_TYPES.SEARCH}_${ActionType.Rejected}`:
       return {
         ...initialState,
         error: true,
       };
 
-    case `${GIPHY_ACTION_TYPES.GIPHY_SEARCH_MORE}_${ActionType.Rejected}`:
+    case `${SEARCH_ACTION_TYPES.SEARCH_MORE}_${ActionType.Rejected}`:
       return {
         ...state,
         isLoading: false,

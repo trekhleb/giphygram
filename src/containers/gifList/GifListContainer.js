@@ -4,39 +4,39 @@ import { connect } from 'react-redux';
 import { GifList } from '../../components/gifList/GifList';
 import { InfiniteScroll } from '../../components/shared/infiniteScroll/InfiniteScroll';
 import { Spinner } from '../../components/shared/spinner/Spinner';
-import { giphySearchMore } from '../../actions/giphyActions';
+import { searchMore } from '../../actions/searchActions';
 import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
 
 class GifListDisconnected extends React.Component {
   static propTypes = {
-    gifs: PropTypes.arrayOf(PropTypes.object),
+    searchResults: PropTypes.arrayOf(PropTypes.object),
     isLoading: PropTypes.bool,
     isFetchingMore: PropTypes.bool,
-    giphySearchMore: PropTypes.func.isRequired,
+    searchMore: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
-    gifs: [],
+    searchResults: [],
     isLoading: false,
     isFetchingMore: false,
   };
 
   onFetchMore = () => {
-    const { isFetchingMore, giphySearchMore: giphySearchMoreCallback } = this.props;
+    const { isFetchingMore, searchMore: searchMoreCallback } = this.props;
 
     if (!isFetchingMore) {
-      giphySearchMoreCallback();
+      searchMoreCallback();
     }
   };
 
   render() {
-    const { gifs, isLoading, isFetchingMore } = this.props;
+    const { searchResults, isLoading, isFetchingMore } = this.props;
 
     const fetchMoreSpinner = isFetchingMore ? <Spinner /> : null;
 
     return (
       <InfiniteScroll onFetchMore={this.onFetchMore}>
-        <GifList gifs={gifs} isLoading={isLoading} />
+        <GifList gifs={searchResults} isLoading={isLoading} />
         {fetchMoreSpinner}
       </InfiniteScroll>
     );
@@ -47,14 +47,14 @@ const mapStateToProps = (state) => {
   const searchResults = getSearchResultsFromState(state);
 
   return {
-    gifs: searchResults.data || [],
+    searchResults: searchResults.data || [],
     isLoading: searchResults.isLoading || false,
     isFetchingMore: searchResults.isFetchingMore || false,
   };
 };
 
 const mapDispatchToProps = {
-  giphySearchMore,
+  searchMore,
 };
 
 export const GifListContainer = connect(

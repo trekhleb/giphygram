@@ -1,5 +1,5 @@
 import { SEARCH_ACTION_TYPES } from '../actions/searchParamsActions';
-import { GIPHY_BATCH_SIZE } from '../config/system';
+import { SEARCH_BATCH_SIZE } from '../config/system';
 
 /**
  * @typedef SearchParamsState
@@ -16,7 +16,7 @@ import { GIPHY_BATCH_SIZE } from '../config/system';
  */
 export const defaultSearchParams = {
   query: '',
-  limit: GIPHY_BATCH_SIZE,
+  limit: SEARCH_BATCH_SIZE,
   offset: 0,
   rating: 'G',
   lang: 'en',

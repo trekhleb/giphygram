@@ -1,26 +1,28 @@
 import { GiphyService } from '../services/GiphyService';
 import { updateOffset } from './searchParamsActions';
-import { GIPHY_BATCH_SIZE } from '../config/system';
+import { SEARCH_BATCH_SIZE } from '../config/system';
+import { getSearchParamsFromState } from '../reducers/searchParamsReducer';
 
-export const GIPHY_ACTION_TYPES = {
-  GIPHY_SEARCH: 'GIPHY_SEARCH',
-  GIPHY_SEARCH_MORE: 'GIPHY_SEARCH_MORE',
+export const SEARCH_ACTION_TYPES = {
+  SEARCH: 'SEARCH',
+  SEARCH_MORE: 'SEARCH_MORE',
 };
 
 // Search on GIPHY.
-export function giphySearch(searchParams) {
+export function search(searchParams) {
   return (dispatch) => {
     dispatch({
-      type: GIPHY_ACTION_TYPES.GIPHY_SEARCH,
+      type: SEARCH_ACTION_TYPES.SEARCH,
       payload: GiphyService.search(searchParams),
     });
   };
 }
 
 // Fetch more search results from GIPHY.
-export function giphySearchMore(batchSize = GIPHY_BATCH_SIZE) {
+export function searchMore(batchSize = SEARCH_BATCH_SIZE) {
   return (dispatch, getState) => {
-    const { searchParams } = getState();
+    const state = getState();
+    const searchParams = getSearchParamsFromState(state);
 
     const offset = searchParams.offset + batchSize;
     searchParams.offset = offset;
@@ -28,7 +30,7 @@ export function giphySearchMore(batchSize = GIPHY_BATCH_SIZE) {
     updateOffset(offset)(dispatch);
 
     dispatch({
-      type: GIPHY_ACTION_TYPES.GIPHY_SEARCH_MORE,
+      type: SEARCH_ACTION_TYPES.SEARCH_MORE,
       payload: GiphyService.search(searchParams),
     });
   };

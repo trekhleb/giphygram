@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { SearchForm } from '../../components/searchForm/SearchForm';
-import { giphySearch } from '../../actions/giphyActions';
+import { search } from '../../actions/searchActions';
 import { updateSearchQuery } from '../../actions/searchParamsActions';
 import { getSearchParamsFromState } from '../../reducers/searchParamsReducer';
 
 class SearchFormDisconnected extends React.Component {
   static propTypes = {
-    giphySearch: PropTypes.func.isRequired,
+    search: PropTypes.func.isRequired,
     updateSearchQuery: PropTypes.func.isRequired,
     query: PropTypes.string,
   };
@@ -18,8 +18,8 @@ class SearchFormDisconnected extends React.Component {
   };
 
   onSearchSubmit = (query) => {
-    const { giphySearch: giphySearchCallback } = this.props;
-    giphySearchCallback({ query });
+    const { search: searchCallback } = this.props;
+    searchCallback({ query });
   };
 
   onSearchUpdate = (query) => {
@@ -48,7 +48,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  giphySearch,
+  search,
   updateSearchQuery,
 };
 
