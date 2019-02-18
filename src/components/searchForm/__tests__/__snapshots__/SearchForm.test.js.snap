@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchForm should be rendered correctly empty query 1`] = `
+exports[`SearchForm should be rendered correctly with empty query 1`] = `
 <form
   className="form"
   onSubmit={[Function]}
@@ -37,7 +37,7 @@ exports[`SearchForm should be rendered correctly empty query 1`] = `
 </form>
 `;
 
-exports[`SearchForm should be rendered correctly non-empty query 1`] = `
+exports[`SearchForm should be rendered correctly with non-empty query 1`] = `
 <form
   className="form"
   onSubmit={[Function]}
