@@ -33,6 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "axios-mock-adapter": "^1.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "gh-pages": "^2.0.1",
     "husky": "^1.3.1",
