@@ -6,7 +6,7 @@ import { Routes } from './Routes';
 import { Header } from './shared/header/Header';
 import 'open-iconic/font/css/open-iconic-bootstrap.min.css';
 import { storePropType } from '../types/reduxTypes';
-import { APP_BASE_URL } from '../config/system';
+import { APP_BASE_URL } from '../config';
 
 export class App extends React.Component {
   static propTypes = {

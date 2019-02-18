@@ -1,5 +1,5 @@
 import { RequestService } from './RequestService';
-import { GIPHY_API_HOST, GIPHY_API_KEY } from '../config/system';
+import { GIPHY_API_HOST, GIPHY_API_KEY } from '../config';
 import { defaultSearchParams } from '../reducers/searchParamsReducer';
 
 // GiphyService is responsible for all integrations with Giphy API.

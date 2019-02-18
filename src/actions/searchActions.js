@@ -1,6 +1,6 @@
 import { GiphyService } from '../services/GiphyService';
 import { updateOffset } from './searchParamsActions';
-import { SEARCH_BATCH_SIZE } from '../config/system';
+import { SEARCH_BATCH_SIZE } from '../config';
 import { getSearchParamsFromState } from '../reducers/searchParamsReducer';
 
 export const SEARCH_ACTION_TYPES = {

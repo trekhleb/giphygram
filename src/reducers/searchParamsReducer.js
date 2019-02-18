@@ -1,5 +1,5 @@
 import { SEARCH_ACTION_TYPES } from '../actions/searchParamsActions';
-import { SEARCH_BATCH_SIZE } from '../config/system';
+import { SEARCH_BATCH_SIZE } from '../config';
 
 /**
  * @typedef SearchParamsState
