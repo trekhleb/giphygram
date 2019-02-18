@@ -11,7 +11,7 @@ export class GiphyService {
     offset = defaultSearchParams.offset,
     rating = defaultSearchParams.rating,
     lang = defaultSearchParams.lang,
-  }) {
+  } = {}) {
     const searchParams = {
       api_key: GIPHY_API_KEY,
       q: query,
@@ -21,6 +21,9 @@ export class GiphyService {
       lang,
     };
 
-    return RequestService.get(`${GIPHY_API_HOST}/v1/gifs/search`, searchParams);
+    return RequestService.get(
+      `${GIPHY_API_HOST}/v1/gifs/search`,
+      searchParams,
+    );
   }
 }

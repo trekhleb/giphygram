@@ -16,10 +16,10 @@ describe('RequestService', () => {
 
     RequestService
       .get(testUrl, testParams)
-      .then((responseData) => {
+      .then((response) => {
         // We should receive mocked response.
-        expect(responseData).toBeDefined();
-        expect(responseData.data).toEqual(testResponse);
+        expect(response).toBeDefined();
+        expect(response.data).toEqual(testResponse);
       })
       .catch(() => {
         // We should not get here.
