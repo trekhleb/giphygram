@@ -1,26 +1,31 @@
+.spinner-container {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 .spinner {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
 }
 
 .spinner:after {
-    content: " ";
-    display: block;
-    width: 46px;
-    height: 46px;
-    margin: 1px;
-    border-radius: 50%;
-    border: 5px solid #343a40;
-    border-color: #343a40 transparent #343a40 transparent;
-    animation: spinner 1.2s linear infinite;
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #343a40;
+  border-color: #343a40 transparent #343a40 transparent;
+  animation: spinner 1.2s linear infinite;
 }
 
 @keyframes spinner {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
