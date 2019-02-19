@@ -34,8 +34,10 @@ export function searchMore(batchSize = SEARCH_BATCH_SIZE) {
     const offset = searchParams.offset + batchSize;
     searchParams.offset = offset;
 
+    // Update search offset in the store.
     dispatch(updateSearchOffset(offset));
 
+    // Fetch new search results and put them to the store.
     dispatch({
       type: SEARCH_ACTION_TYPES.SEARCH_MORE,
       payload: GiphyService.search(searchParams),

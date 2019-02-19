@@ -6,7 +6,7 @@ import { search, searchReset } from '../../actions/searchActions';
 import { updateSearchQuery } from '../../actions/searchParamsActions';
 import { getSearchParamsFromState } from '../../reducers/searchParamsReducer';
 
-class SearchFormDisconnected extends React.Component {
+class SearchFormRaw extends React.Component {
   static propTypes = {
     search: PropTypes.func.isRequired,
     searchReset: PropTypes.func.isRequired,
@@ -60,4 +60,4 @@ const mapDispatchToProps = {
 export const SearchFormContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(SearchFormDisconnected);
+)(SearchFormRaw);

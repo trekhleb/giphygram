@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { SearchFormContainer } from '../../../containers/searchForm/SearchFormContainer';
+import { SearchFormContainer } from '../../../containers/searchFormContainer/SearchFormContainer';
 import './header.css';
 
 class HeaderRaw extends React.Component {

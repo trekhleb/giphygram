@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { GifList } from '../../components/gifList/GifList';
+import { SearchResults } from '../../components/searchResults/SearchResults';
 import { InfiniteScroll } from '../../components/shared/infiniteScroll/InfiniteScroll';
 import { Spinner } from '../../components/shared/spinner/Spinner';
 import { searchMore } from '../../actions/searchActions';
 import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
 
-class GifListDisconnected extends React.Component {
+class SearchResultsContainerRaw extends React.Component {
   static propTypes = {
-    searchResults: PropTypes.arrayOf(PropTypes.object),
+    searchItems: PropTypes.arrayOf(PropTypes.object),
     isLoading: PropTypes.bool,
     isFetchingMore: PropTypes.bool,
     searchMore: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
-    searchResults: [],
+    searchItems: [],
     isLoading: false,
     isFetchingMore: false,
   };
@@ -30,13 +30,13 @@ class GifListDisconnected extends React.Component {
   };
 
   render() {
-    const { searchResults, isLoading, isFetchingMore } = this.props;
+    const { searchItems, isLoading, isFetchingMore } = this.props;
 
     const fetchMoreSpinner = isFetchingMore ? <Spinner /> : null;
 
     return (
       <InfiniteScroll onFetchMore={this.onFetchMore}>
-        <GifList gifs={searchResults} isLoading={isLoading} />
+        <SearchResults searchItems={searchItems} isLoading={isLoading} />
         {fetchMoreSpinner}
       </InfiniteScroll>
     );
@@ -47,7 +47,7 @@ const mapStateToProps = (state) => {
   const searchResults = getSearchResultsFromState(state);
 
   return {
-    searchResults: searchResults.data || [],
+    searchItems: searchResults.data || [],
     isLoading: searchResults.isLoading || false,
     isFetchingMore: searchResults.isFetchingMore || false,
   };
@@ -57,7 +57,7 @@ const mapDispatchToProps = {
   searchMore,
 };
 
-export const GifListContainer = connect(
+export const SearchResultsContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(GifListDisconnected);
+)(SearchResultsContainerRaw);

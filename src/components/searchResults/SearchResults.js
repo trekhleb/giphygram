@@ -3,31 +3,31 @@ import PropTypes from 'prop-types';
 import { GifItem } from '../gifItem/GifItem';
 import { Spinner } from '../shared/spinner/Spinner';
 
-export class GifList extends React.Component {
+export class SearchResults extends React.Component {
   static propTypes = {
-    gifs: PropTypes.arrayOf(PropTypes.object),
+    searchItems: PropTypes.arrayOf(PropTypes.object),
     isLoading: PropTypes.bool,
   };
 
   static defaultProps = {
-    gifs: [],
+    searchItems: [],
     isLoading: false,
   };
 
   render() {
-    const { gifs, isLoading } = this.props;
+    const { searchItems, isLoading } = this.props;
 
     if (isLoading) {
       return <Spinner />;
     }
 
-    const gifsElements = gifs.map(gif => (
+    const searchItemsElements = searchItems.map(gif => (
       <GifItem gif={gif} key={gif.id} />
     ));
 
     return (
       <div className="mb-3">
-        {gifsElements}
+        {searchItemsElements}
       </div>
     );
   }

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { SearchSummary } from '../../components/searchSummary/SearchSummary';
 import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
 
-class SearchSummaryDisconnected extends React.Component {
+class SearchSummaryRaw extends React.Component {
   static propTypes = {
     total: PropTypes.number,
   };
@@ -39,4 +39,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export const SearchSummaryContainer = connect(mapStateToProps)(SearchSummaryDisconnected);
+export const SearchSummaryContainer = connect(mapStateToProps)(SearchSummaryRaw);

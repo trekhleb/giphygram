@@ -1,13 +1,13 @@
 import React from 'react';
-import { GifListContainer } from '../../containers/gifList/GifListContainer';
-import { SearchSummaryContainer } from '../../containers/searchSummary/SearchSummaryContainer';
+import { SearchResultsContainer } from '../../containers/searchResultsContainer/SearchResultsContainer';
+import { SearchSummaryContainer } from '../../containers/searchSummaryContainer/SearchSummaryContainer';
 
 export class Home extends React.Component {
   render() {
     return (
       <div>
         <SearchSummaryContainer />
-        <GifListContainer />
+        <SearchResultsContainer />
       </div>
     );
   }
