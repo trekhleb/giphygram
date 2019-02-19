@@ -39,7 +39,7 @@ export const gifImagesPropType = PropTypes.shape({
 });
 
 // PropType for the Giphy search result entity.
-export const gifItemPropType = PropTypes.shape({
+export const gifEntityPropType = PropTypes.shape({
   title: PropTypes.string,
   _score: PropTypes.number,
   type: PropTypes.string,

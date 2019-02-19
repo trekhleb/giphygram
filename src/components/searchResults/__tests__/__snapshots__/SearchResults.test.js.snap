@@ -6,8 +6,8 @@ exports[`SearchResults should be rendered correctly when it is not loading 1`] =
 <div
   className="mb-3"
 >
-  <GifItem
-    gif={
+  <SearchItem
+    item={
       Object {
         "_score": 298.40634,
         "analytics": Object {
@@ -198,8 +198,8 @@ exports[`SearchResults should be rendered correctly when it is not loading 1`] =
       }
     }
   />
-  <GifItem
-    gif={
+  <SearchItem
+    item={
       Object {
         "_score": 285.9092,
         "analytics": Object {
@@ -390,8 +390,8 @@ exports[`SearchResults should be rendered correctly when it is not loading 1`] =
       }
     }
   />
-  <GifItem
-    gif={
+  <SearchItem
+    item={
       Object {
         "_score": 282.85458,
         "analytics": Object {
@@ -582,8 +582,8 @@ exports[`SearchResults should be rendered correctly when it is not loading 1`] =
       }
     }
   />
-  <GifItem
-    gif={
+  <SearchItem
+    item={
       Object {
         "_score": 280.29596,
         "analytics": Object {
@@ -774,8 +774,8 @@ exports[`SearchResults should be rendered correctly when it is not loading 1`] =
       }
     }
   />
-  <GifItem
-    gif={
+  <SearchItem
+    item={
       Object {
         "_score": 279.7735,
         "analytics": Object {

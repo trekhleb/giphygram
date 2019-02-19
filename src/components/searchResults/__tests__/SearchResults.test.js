@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import { SearchResults } from '../SearchResults';
 import searchResultsMock from '../../../mocks/searchResults';
 
-jest.mock('../../gifItem/GifItem', () => ({
-  GifItem: 'GifItem',
+jest.mock('../../searchItem/SearchItem', () => ({
+  SearchItem: 'SearchItem',
 }));
 
 jest.mock('../../shared/spinner/Spinner', () => ({

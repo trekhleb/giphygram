@@ -1,13 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { GifItem } from '../GifItem';
+import { SearchItem } from '../SearchItem';
 import searchResultsMock from '../../../mocks/searchResults';
 
-describe('GifItem', () => {
+describe('SearchItem', () => {
   it('should be rendered correctly', () => {
-    const gif = searchResultsMock.data[0];
+    const gifEntity = searchResultsMock.data[0];
     const tree = renderer
-      .create(<GifItem gif={gif} />)
+      .create(<SearchItem item={gifEntity} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

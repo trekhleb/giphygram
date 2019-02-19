@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GifItem } from '../gifItem/GifItem';
+import { SearchItem } from '../searchItem/SearchItem';
 import { Spinner } from '../shared/spinner/Spinner';
 
 export class SearchResults extends React.Component {
@@ -21,8 +21,8 @@ export class SearchResults extends React.Component {
       return <Spinner />;
     }
 
-    const searchItemsElements = searchItems.map(gif => (
-      <GifItem gif={gif} key={gif.id} />
+    const searchItemsElements = searchItems.map(gifEntity => (
+      <SearchItem item={gifEntity} key={gifEntity.id} />
     ));
 
     return (
