@@ -34,7 +34,7 @@ export function searchMore(batchSize = SEARCH_BATCH_SIZE) {
     const offset = searchParams.offset + batchSize;
     searchParams.offset = offset;
 
-    updateSearchOffset(offset)(dispatch);
+    dispatch(updateSearchOffset(offset));
 
     dispatch({
       type: SEARCH_ACTION_TYPES.SEARCH_MORE,
