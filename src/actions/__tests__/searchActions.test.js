@@ -7,21 +7,14 @@ import {
 import searchResultsMock from '../../mocks/searchResults';
 import { SEARCH_PARAMS_ACTION_TYPES } from '../searchParamsActions';
 import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
+import { getSearchParamsFromState } from '../../reducers/searchParamsReducer';
 
 jest.mock('../../services/GiphyService');
-jest.mock('../../reducers/searchParamsReducer', () => ({
-  getSearchParamsFromState: () => ({
-    query: 'kittens',
-    offset: 0,
-  }),
-}));
-jest.mock('../../reducers/searchResultsReducer', () => ({
-  getSearchResultsFromState: jest.fn(),
-}));
+jest.mock('../../reducers/searchParamsReducer');
+jest.mock('../../reducers/searchResultsReducer');
 
 describe('searchActions', () => {
   beforeEach(() => {
-    // Reset all cross-tests side-effects.
     jest.clearAllMocks();
 
     getSearchResultsFromState.mockImplementation(() => ({
@@ -33,6 +26,11 @@ describe('searchActions', () => {
       },
       isLoading: false,
       isFetchingMore: false,
+    }));
+
+    getSearchParamsFromState.mockImplementation(() => ({
+      query: 'kittens',
+      offset: 0,
     }));
   });
 
