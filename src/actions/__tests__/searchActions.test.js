@@ -6,6 +6,7 @@ import {
 } from '../searchActions';
 import searchResultsMock from '../../mocks/searchResults';
 import { SEARCH_PARAMS_ACTION_TYPES } from '../searchParamsActions';
+import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
 
 jest.mock('../../services/GiphyService');
 jest.mock('../../reducers/searchParamsReducer', () => ({
@@ -15,22 +16,24 @@ jest.mock('../../reducers/searchParamsReducer', () => ({
   }),
 }));
 jest.mock('../../reducers/searchResultsReducer', () => ({
-  getSearchResultsFromState: () => ({
-    data: [],
-    pagination: {
-      total_count: 100,
-      count: 5,
-      offset: 0,
-    },
-    isLoading: false,
-    isFetchingMore: false,
-  }),
+  getSearchResultsFromState: jest.fn(),
 }));
 
 describe('searchActions', () => {
   beforeEach(() => {
     // Reset all cross-tests side-effects.
     jest.clearAllMocks();
+
+    getSearchResultsFromState.mockImplementation(() => ({
+      data: [],
+      pagination: {
+        total_count: 100,
+        count: 5,
+        offset: 0,
+      },
+      isLoading: false,
+      isFetchingMore: false,
+    }));
   });
 
   it('should generate search action', () => {
@@ -78,6 +81,52 @@ describe('searchActions', () => {
     // According to the mock there is only 100 items on the server.
     // Let's try to fetch items starting from offset 200.
     const batchSize = 200;
+    searchMore(batchSize)(dispatchMock, getStateMock);
+
+    // We expect that searchMore should not dispatch any actions.
+    expect(dispatchMock).not.toHaveBeenCalled();
+  });
+
+  it('should not fetch more results if they are already loading', () => {
+    getSearchResultsFromState.mockImplementation(() => ({
+      data: [],
+      pagination: {
+        total_count: 100,
+        count: 5,
+        offset: 0,
+      },
+      isLoading: false,
+      isFetchingMore: true,
+    }));
+
+    const dispatchMock = jest.fn();
+    const getStateMock = jest.fn();
+
+    // Do search more action.
+    const batchSize = 50;
+    searchMore(batchSize)(dispatchMock, getStateMock);
+
+    // We expect that searchMore should not dispatch any actions.
+    expect(dispatchMock).not.toHaveBeenCalled();
+  });
+
+  it('should not fetch more results if initial search is loading', () => {
+    getSearchResultsFromState.mockImplementation(() => ({
+      data: [],
+      pagination: {
+        total_count: 100,
+        count: 5,
+        offset: 0,
+      },
+      isLoading: true,
+      isFetchingMore: false,
+    }));
+
+    const dispatchMock = jest.fn();
+    const getStateMock = jest.fn();
+
+    // Do search more action.
+    const batchSize = 50;
     searchMore(batchSize)(dispatchMock, getStateMock);
 
     // We expect that searchMore should not dispatch any actions.
