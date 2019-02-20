@@ -14,6 +14,18 @@ jest.mock('../../reducers/searchParamsReducer', () => ({
     offset: 0,
   }),
 }));
+jest.mock('../../reducers/searchResultsReducer', () => ({
+  getSearchResultsFromState: () => ({
+    data: [],
+    pagination: {
+      total_count: 100,
+      count: 5,
+      offset: 0,
+    },
+    isLoading: false,
+    isFetchingMore: false,
+  }),
+}));
 
 describe('searchActions', () => {
   beforeEach(() => {
@@ -56,5 +68,19 @@ describe('searchActions', () => {
     expect(dispatchMock.mock.calls[1][0].type).toBe(SEARCH_ACTION_TYPES.SEARCH_MORE);
 
     return expect(dispatchMock.mock.calls[1][0].payload).resolves.toBe(searchResultsMock);
+  });
+
+  it('should not generate search more action if there are no additional items on server', () => {
+    const dispatchMock = jest.fn();
+    const getStateMock = jest.fn();
+
+    // Do search more action.
+    // According to the mock there is only 100 items on the server.
+    // Let's try to fetch items starting from offset 200.
+    const batchSize = 200;
+    searchMore(batchSize)(dispatchMock, getStateMock);
+
+    // We expect that searchMore should not dispatch any actions.
+    expect(dispatchMock).not.toHaveBeenCalled();
   });
 });
