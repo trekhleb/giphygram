@@ -16,7 +16,7 @@ exports[`Header should be rendered correctly 1`] = `
   <div
     className="mb-3"
   >
-    <SearchFormContainer />
+    <SearchFormContainerConnected />
   </div>
 </div>
 `;

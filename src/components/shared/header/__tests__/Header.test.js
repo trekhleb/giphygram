@@ -3,9 +3,10 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { Header } from '../Header';
 
-jest.mock('../../../../containers/searchFormContainer/SearchFormContainer', () => ({
-  SearchFormContainer: 'SearchFormContainer',
-}));
+jest.mock(
+  '../../../../containers/searchFormContainer/SearchFormContainer',
+  () => 'SearchFormContainerConnected',
+);
 
 describe('Header', () => {
   it('should be rendered correctly', () => {

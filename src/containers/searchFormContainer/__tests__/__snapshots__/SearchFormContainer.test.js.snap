@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchFormContainer should be rendered correctly 1`] = `
+<SearchForm
+  onSearchReset={[Function]}
+  onSearchSubmit={[Function]}
+  onSearchUpdate={[Function]}
+  query="Test search query"
+/>
+`;

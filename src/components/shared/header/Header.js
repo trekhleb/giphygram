@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { SearchFormContainer } from '../../../containers/searchFormContainer/SearchFormContainer';
+import SearchFormContainerConnected from '../../../containers/searchFormContainer/SearchFormContainer';
 import './header.css';
 
 class HeaderRaw extends React.Component {
@@ -13,7 +13,7 @@ class HeaderRaw extends React.Component {
           </Link>
         </h1>
         <div className="mb-3">
-          <SearchFormContainer />
+          <SearchFormContainerConnected />
         </div>
       </div>
     );
