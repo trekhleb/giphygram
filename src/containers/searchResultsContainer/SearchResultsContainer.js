@@ -7,7 +7,7 @@ import { Spinner } from '../../components/shared/spinner/Spinner';
 import { searchMore } from '../../actions/searchActions';
 import { getSearchResultsFromState } from '../../reducers/searchResultsReducer';
 
-class SearchResultsContainerRaw extends React.Component {
+export class SearchResultsContainer extends React.Component {
   static propTypes = {
     searchItems: PropTypes.arrayOf(PropTypes.object),
     isLoading: PropTypes.bool,
@@ -57,7 +57,7 @@ const mapDispatchToProps = {
   searchMore,
 };
 
-export const SearchResultsContainer = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(SearchResultsContainerRaw);
+)(SearchResultsContainer);
