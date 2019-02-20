@@ -24,4 +24,39 @@ describe('SearchFormContainer', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('should fire callbacks', () => {
+    const onSearch = jest.fn();
+    const onSearchReset = jest.fn();
+    const onQueryUpdate = jest.fn();
+
+    const testComponentInstance = renderer
+      .create((
+        <SearchFormContainer
+          query="Test search query"
+          search={onSearch}
+          searchReset={onSearchReset}
+          updateSearchQuery={onQueryUpdate}
+        />
+      )).root;
+
+    const searchFormInstance = testComponentInstance.findByType('SearchForm');
+
+    const searchQuery = 'cats';
+    const searchUpdatedQuery = 'dogs';
+
+    searchFormInstance.props.onSearchSubmit(searchQuery);
+    searchFormInstance.props.onSearchUpdate(searchUpdatedQuery);
+    searchFormInstance.props.onSearchReset();
+
+    expect(onSearch).toHaveBeenCalledTimes(1);
+    expect(onSearch).toHaveBeenLastCalledWith({ query: searchQuery });
+
+    expect(onQueryUpdate).toHaveBeenCalledTimes(1);
+    expect(onQueryUpdate).toHaveBeenLastCalledWith(searchUpdatedQuery);
+
+    expect(onSearchReset).toHaveBeenCalledTimes(1);
+
+    expect(searchFormInstance).toBeDefined();
+  });
 });
