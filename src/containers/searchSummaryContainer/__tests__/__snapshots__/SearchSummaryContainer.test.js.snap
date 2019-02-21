@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchSummaryContainer should be rendered correctly by default 1`] = `
+<SearchSummary
+  total={0}
+/>
+`;
+
+exports[`SearchSummaryContainer should be rendered correctly with specified total parameter 1`] = `
+<SearchSummary
+  total={42}
+/>
+`;
