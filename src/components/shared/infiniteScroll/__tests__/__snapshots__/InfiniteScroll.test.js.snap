@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfiniteScroll should render mant children components correctly 1`] = `
+exports[`InfiniteScroll should render many children components correctly 1`] = `
 <div>
   <div>
     Child #1

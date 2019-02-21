@@ -22,6 +22,10 @@ export class InfiniteScroll extends React.Component {
     window.addEventListener('scroll', this.onScroll, false);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll, false);
+  }
+
   onScroll = () => {
     const { activationDistance, onFetchMore } = this.props;
 
