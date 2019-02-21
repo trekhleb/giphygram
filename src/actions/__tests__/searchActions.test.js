@@ -15,8 +15,6 @@ jest.mock('../../reducers/searchResultsReducer');
 
 describe('searchActions', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
-
     getSearchResultsFromState.mockImplementation(() => ({
       data: [],
       pagination: {
@@ -32,6 +30,10 @@ describe('searchActions', () => {
       query: 'kittens',
       offset: 0,
     }));
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it('should generate search action', () => {
