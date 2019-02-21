@@ -5,7 +5,10 @@ const DEFAULT_ACTIVATION_DISTANCE = 50;
 
 export class InfiniteScroll extends React.Component {
   static propTypes = {
-    children: PropTypes.arrayOf(PropTypes.element).isRequired,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+    ]).isRequired,
     onFetchMore: PropTypes.func,
     activationDistance: PropTypes.number,
   };

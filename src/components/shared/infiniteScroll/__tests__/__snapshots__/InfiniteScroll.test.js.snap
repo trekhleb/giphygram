@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfiniteScroll should render mant children components correctly 1`] = `
+<div>
+  <div>
+    Child #1
+  </div>
+  <div>
+    Child #2
+  </div>
+</div>
+`;
+
+exports[`InfiniteScroll should render one child component correctly 1`] = `
+<div>
+  <div>
+    Child #1
+  </div>
+</div>
+`;
