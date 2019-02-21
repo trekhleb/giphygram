@@ -22,9 +22,9 @@ export class SearchResultsContainer extends React.Component {
   };
 
   onFetchMore = () => {
-    const { isFetchingMore, searchMore: searchMoreCallback } = this.props;
+    const { isFetchingMore, isLoading, searchMore: searchMoreCallback } = this.props;
 
-    if (!isFetchingMore) {
+    if (!isFetchingMore && !isLoading) {
       searchMoreCallback();
     }
   };

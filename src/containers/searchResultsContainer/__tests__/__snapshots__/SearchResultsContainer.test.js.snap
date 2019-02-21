@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultsContainer should be rendered correctly 1`] = `
+<InfiniteScroll
+  onFetchMore={[Function]}
+>
+  <SearchResults
+    isLoading={false}
+    searchItems={Array []}
+  />
+</InfiniteScroll>
+`;
