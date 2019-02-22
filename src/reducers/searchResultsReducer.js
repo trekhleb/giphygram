@@ -24,7 +24,7 @@ export const defaultSearchResults = {
   error: null,
 };
 
-// Giphy reducer is responsible for storing information from Giphy API.
+// Search results reducer is responsible for storing information from Giphy API.
 export const searchResultsReducer = (state = defaultSearchResults, action) => {
   const payloadData = (action.payload && action.payload.data) || null;
 
