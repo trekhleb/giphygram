@@ -62,10 +62,10 @@ Current project is integrated with [Travis](https://travis-ci.org/trekhleb/giphy
 This list contains the next steps for further project development that have not been completed yet because of limited time that was dedicated to this project.
 
 - [x] Reset search results by clicking on reset button.
-- [ ] Implement HTTP requests error handling.
+- [x] Increase code coverage closer to 100% to increase code stability.
+- [x] Add multi-environment support using environment variables.
 - [ ] Switch to 3-columns views automatically on wide screens.
-- [ ] Optimize huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
-- [ ] Increase code coverage to 100% to increase code stability.
-- [ ] Add multi-environment support using environment variables (to avoid publishing sensitive data to GitHub) and to be able to have different configurations for local/stage/prod environments.
 - [ ] Reflect search params (query and offsets) in the URL to be able to send the link to a friend with predefined search.
+- [ ] Implement HTTP requests error handling.
+- [ ] Optimize huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
 - [ ] Show most trending GIFs on the home page.
