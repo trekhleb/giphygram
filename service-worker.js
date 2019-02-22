@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/giphygram/precache-manifest.3a7097337ff5eda64955075816f5ac55.js"
+  "/giphygram/precache-manifest.7d99c217402dbd806a98bac958cd3097.js"
 );
 
 workbox.clientsClaim();
