@@ -15,7 +15,7 @@ import { SEARCH_ACTION_TYPES } from '../actions/searchActions';
 /**
  * @type {SearchResultsState}
  */
-const initialState = {
+export const defaultSearchResults = {
   data: [],
   pagination: {},
   meta: {},
@@ -25,12 +25,12 @@ const initialState = {
 };
 
 // Giphy reducer is responsible for storing information from Giphy API.
-export const searchResultsReducer = (state = initialState, action) => {
+export const searchResultsReducer = (state = defaultSearchResults, action) => {
   const payloadData = (action.payload && action.payload.data) || null;
 
   switch (action.type) {
     case SEARCH_ACTION_TYPES.SEARCH_RESET:
-      return { ...initialState };
+      return { ...defaultSearchResults };
 
     case `${SEARCH_ACTION_TYPES.SEARCH}_${ActionType.Pending}`:
       return {
@@ -72,7 +72,9 @@ export const searchResultsReducer = (state = initialState, action) => {
 
     case `${SEARCH_ACTION_TYPES.SEARCH}_${ActionType.Rejected}`:
       return {
-        ...initialState,
+        ...defaultSearchResults,
+        isLoading: false,
+        isFetchingMore: false,
         error: true,
       };
 
