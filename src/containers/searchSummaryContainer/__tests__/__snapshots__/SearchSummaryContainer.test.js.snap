@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchSummaryContainer should be rendered and connected correctly by default 1`] = `
+<SearchSummary
+  total={100}
+/>
+`;
+
 exports[`SearchSummaryContainer should be rendered correctly by default 1`] = `
 <SearchSummary
   total={0}
