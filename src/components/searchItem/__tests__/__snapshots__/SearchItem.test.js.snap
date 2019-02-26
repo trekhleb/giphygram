@@ -2,7 +2,7 @@
 
 exports[`SearchItem should be rendered correctly 1`] = `
 <div
-  className="w-100 mb-3"
+  className="w-100 mb-3 search-item"
 >
   <a
     href="https://giphy.com/gifs/k-dancing-3o6UBlHJQT19wSgJQk"

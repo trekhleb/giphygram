@@ -1,0 +1,8 @@
+.search-item {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 200ms;
+}
+
+.search-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
