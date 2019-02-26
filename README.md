@@ -69,3 +69,4 @@ This list contains the next steps for further project development that have not 
 - [ ] Implement HTTP requests error handling.
 - [ ] Optimize huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
 - [ ] Show most trending GIFs on the home page.
+- [ ] Add "NPM dependencies" badge to the README in order to see outdated packages.
