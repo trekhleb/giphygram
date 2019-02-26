@@ -10,7 +10,7 @@ export class SearchSummaryContainer extends React.Component {
   };
 
   static defaultProps = {
-    total: 0,
+    total: null,
   };
 
   render() {

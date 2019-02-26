@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPage should be rendered correctly 1`] = `
+<div>
+  <searchSummaryContainer />
+  <SearchResultsContainer />
+</div>
+`;

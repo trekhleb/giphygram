@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Routes should launch the search when search param is not empty in URL 1`] = `"SearchPage"`;
+
+exports[`Routes should not launch the search when search param is empty in URL 1`] = `"SearchPage"`;

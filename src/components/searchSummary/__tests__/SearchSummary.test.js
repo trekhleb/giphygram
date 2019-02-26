@@ -18,4 +18,12 @@ describe('SearchSummary', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('should be rendered if nothing was found', () => {
+    const tree = renderer
+      .create(<SearchSummary total={0} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

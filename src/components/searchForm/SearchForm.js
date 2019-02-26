@@ -28,7 +28,10 @@ export class SearchForm extends React.Component {
   onSearchSubmit = (event) => {
     event.preventDefault();
     const { onSearchSubmit, query } = this.props;
-    onSearchSubmit(query);
+    // Don't fire onSearchSubmit callback when search query is empty.
+    if (query) {
+      onSearchSubmit(query);
+    }
   };
 
   onSearchReset = (event) => {

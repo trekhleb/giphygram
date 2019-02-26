@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { Layout } from './shared/layout/Layout';
-import { Routes } from './Routes';
-import { Header } from './shared/header/Header';
+import { Layout } from './components/shared/layout/Layout';
+import RoutesConnected from './Routes';
+import { Header } from './components/shared/header/Header';
+import { storePropType } from './types/reduxTypes';
+import { APP_BASE_URL } from './config';
 import 'open-iconic/font/css/open-iconic-bootstrap.min.css';
-import { storePropType } from '../types/reduxTypes';
-import { APP_BASE_URL } from '../config';
 
 export class App extends React.Component {
   static propTypes = {
@@ -21,7 +21,7 @@ export class App extends React.Component {
         <BrowserRouter basename={APP_BASE_URL}>
           <Layout>
             <Header />
-            <Routes />
+            <RoutesConnected />
           </Layout>
         </BrowserRouter>
       </Provider>

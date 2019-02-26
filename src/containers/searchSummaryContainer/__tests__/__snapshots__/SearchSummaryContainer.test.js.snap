@@ -8,7 +8,7 @@ exports[`SearchSummaryContainer should be rendered and connected correctly by de
 
 exports[`SearchSummaryContainer should be rendered correctly by default 1`] = `
 <SearchSummary
-  total={0}
+  total={null}
 />
 `;
 

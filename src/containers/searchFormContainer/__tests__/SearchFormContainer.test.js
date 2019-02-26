@@ -1,10 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { SearchFormContainer } from '../SearchFormContainer';
+import { RouterService } from '../../../services/RouterService';
 
 jest.mock('../../../actions/searchActions');
 jest.mock('../../../actions/searchParamsActions');
 jest.mock('../../../reducers/searchParamsReducer');
+jest.mock('../../../services/RouterService');
 jest.mock('../../../components/searchForm/SearchForm', () => ({
   SearchForm: 'SearchForm',
 }));
@@ -14,6 +16,7 @@ describe('SearchFormContainer', () => {
     const tree = renderer
       .create((
         <SearchFormContainer
+          routerService={new RouterService(null, null)}
           query="Test search query"
           search={jest.fn()}
           searchReset={jest.fn()}
@@ -33,6 +36,7 @@ describe('SearchFormContainer', () => {
     const testComponentInstance = renderer
       .create((
         <SearchFormContainer
+          routerService={new RouterService(null, null)}
           query="Test search query"
           search={onSearch}
           searchReset={onSearchReset}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { store } from '../../store';
+import { store } from '../store';
 import { App } from '../App';
 
 describe('App', () => {

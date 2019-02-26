@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Home } from '../Home';
+import { SearchPage } from '../SearchPage';
 
 jest.mock(
   '../../../containers/searchResultsContainer/SearchResultsContainer',
@@ -12,10 +12,10 @@ jest.mock(
   () => 'searchSummaryContainer',
 );
 
-describe('Home', () => {
+describe('SearchPage', () => {
   it('should be rendered correctly', () => {
     const tree = renderer
-      .create(<Home />)
+      .create(<SearchPage />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
