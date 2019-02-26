@@ -2,7 +2,7 @@
 
 exports[`SearchItem should be rendered correctly 1`] = `
 <div
-  className="card mb-3"
+  className="w-100 mb-3"
 >
   <a
     href="https://giphy.com/gifs/k-dancing-3o6UBlHJQT19wSgJQk"
@@ -10,7 +10,7 @@ exports[`SearchItem should be rendered correctly 1`] = `
     <img
       alt="k GIF"
       border="0"
-      className="card-img-top"
+      className="w-100"
       src="https://media0.giphy.com/media/3o6UBlHJQT19wSgJQk/200w.gif"
       title="k GIF"
     />

@@ -10,11 +10,11 @@ export class SearchItem extends React.Component {
     const { item } = this.props;
 
     return (
-      <div className="card mb-3">
+      <div className="w-100 mb-3">
         <a href={item.url}>
           <img
+            className="w-100"
             border="0"
-            className="card-img-top"
             src={item.images.fixed_width.url}
             alt={item.title}
             title={item.title}
