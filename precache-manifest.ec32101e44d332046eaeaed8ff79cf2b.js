@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4530a0cb531dcd0febbd",
+    "revision": "5cbf9a3cd7dda45fd35c",
     "url": "/giphygram/static/css/main.f9426016.chunk.css"
   },
   {
-    "revision": "4530a0cb531dcd0febbd",
-    "url": "/giphygram/static/js/main.4530a0cb.chunk.js"
+    "revision": "5cbf9a3cd7dda45fd35c",
+    "url": "/giphygram/static/js/main.5cbf9a3c.chunk.js"
   },
   {
     "revision": "b7cce941d92499efe479",
@@ -24,6 +24,10 @@ self.__precacheManifest = [
     "url": "/giphygram/static/media/open-iconic.3cf97837.woff"
   },
   {
+    "revision": "527eff645d8ead16666afb6931041279",
+    "url": "/giphygram/static/media/open-iconic.527eff64.otf"
+  },
+  {
     "revision": "47151e87c5a8666791a91007de4962da",
     "url": "/giphygram/static/media/open-iconic.47151e87.eot"
   },
@@ -36,11 +40,7 @@ self.__precacheManifest = [
     "url": "/giphygram/static/media/open-iconic.eca2c267.svg"
   },
   {
-    "revision": "527eff645d8ead16666afb6931041279",
-    "url": "/giphygram/static/media/open-iconic.527eff64.otf"
-  },
-  {
-    "revision": "8ee5c1237360d9b84e13713ed2d2c3ed",
+    "revision": "2112a99f0c9c466819a1d0662dec05e6",
     "url": "/giphygram/index.html"
   }
 ];
