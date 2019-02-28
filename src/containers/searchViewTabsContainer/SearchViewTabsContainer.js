@@ -57,6 +57,7 @@ const mapStateToProps = (state) => {
     searchResults.isLoading === false
     && searchResults.pagination
     && Object.prototype.hasOwnProperty.call(searchResults.pagination, 'total_count')
+    && searchResults.pagination.total_count
   ) {
     isHidden = false;
   }
