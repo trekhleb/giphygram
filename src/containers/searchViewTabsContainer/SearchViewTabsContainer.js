@@ -31,7 +31,7 @@ export class SearchViewTabsContainer extends React.Component {
     }
 
     return (
-      <SearchViewTabs columnsNum={columnsNum} onColumnsNumbChange={this.onColumnsNumChange} />
+      <SearchViewTabs columnsNum={columnsNum} onColumnsNumChange={this.onColumnsNumChange} />
     );
   }
 }

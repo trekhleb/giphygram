@@ -4,13 +4,13 @@ import { SearchViewTabs } from '../SearchViewTabs';
 
 describe('SearchViewTabs', () => {
   it('should be rendered correctly by default', () => {
-    const onColumnsNumbChange = jest.fn();
+    const onColumnsNumChange = jest.fn();
 
     const tree = renderer
       .create((
         <SearchViewTabs
           columnsNum={3}
-          onColumnsNumbChange={onColumnsNumbChange}
+          onColumnsNumChange={onColumnsNumChange}
         />
       ))
       .toJSON();
@@ -19,19 +19,19 @@ describe('SearchViewTabs', () => {
   });
 
   it('should fire onColumnsNumbChange callback', () => {
-    const onColumnsNumbChange = jest.fn();
+    const onColumnsNumChange = jest.fn();
 
     const component = renderer
       .create((
         <SearchViewTabs
           columnsNum={3}
-          onColumnsNumbChange={onColumnsNumbChange}
+          onColumnsNumChange={onColumnsNumChange}
         />
       )).root;
 
     const buttons = component.findAllByType('button');
 
-    expect(onColumnsNumbChange).not.toHaveBeenCalled();
+    expect(onColumnsNumChange).not.toHaveBeenCalled();
     expect(buttons).toBeDefined();
 
     // Imitate button clicks.
@@ -39,9 +39,9 @@ describe('SearchViewTabs', () => {
     buttons[1].props.onClick();
     buttons[2].props.onClick();
 
-    expect(onColumnsNumbChange).toHaveBeenCalledTimes(3);
-    expect(onColumnsNumbChange.mock.calls[0][0]).toBe(1);
-    expect(onColumnsNumbChange.mock.calls[1][0]).toBe(3);
-    expect(onColumnsNumbChange.mock.calls[2][0]).toBe(4);
+    expect(onColumnsNumChange).toHaveBeenCalledTimes(3);
+    expect(onColumnsNumChange.mock.calls[0][0]).toBe(1);
+    expect(onColumnsNumChange.mock.calls[1][0]).toBe(3);
+    expect(onColumnsNumChange.mock.calls[2][0]).toBe(4);
   });
 });

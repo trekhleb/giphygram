@@ -12,12 +12,12 @@ const columnButtons = [
 export class SearchViewTabs extends React.Component {
   static propTypes = {
     columnsNum: PropTypes.oneOf(SUPPORTED_COLUMNS_NUMS).isRequired,
-    onColumnsNumbChange: PropTypes.func.isRequired,
+    onColumnsNumChange: PropTypes.func.isRequired,
   };
 
   onButtonClick = (columnsNum) => {
-    const { onColumnsNumbChange } = this.props;
-    onColumnsNumbChange(columnsNum);
+    const { onColumnsNumChange } = this.props;
+    onColumnsNumChange(columnsNum);
   };
 
   render() {
