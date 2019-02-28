@@ -1,8 +1,8 @@
 /**
  * @typedef LayoutState
  * @type {object}
- * @property {string} size - screen size name (is being set automatically).
- * @property {string} manualSize - screen size name (is being set manually).
+ * @property {?string} size - screen size name (is being set automatically).
+ * @property {?string} manualSize - screen size name (is being set manually).
  */
 
 import { LAYOUT_ACTION_TYPES } from '../actions/layoutActions';
