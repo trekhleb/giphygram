@@ -64,7 +64,8 @@ This list contains the next steps for further project development that have not 
 - [x] Add multi-environment support using environment variables.
 - [x] Reflect search params in the URL to be able to send the link to a friend with predefined search.
 - [x] Switch to 3-columns views automatically on wide screens.
-- [ ] Implement HTTP requests error handling.
 - [ ] Optimize huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
+- [ ] Setup gif placeholders size in advance in order ot avoid image "jumps".
+- [ ] Implement HTTP requests error handling.
 - [ ] Show most trending GIFs on the home page.
 - [ ] Add "NPM dependencies" badge to the README in order to see outdated packages.
