@@ -28,33 +28,6 @@ const itemsMock = [
 const renderItemMock = item => <div key={item.id}>{item.name}</div>;
 
 describe('MasonryGrid', () => {
-  it('should be rendered correctly by default', () => {
-    const tree = renderer
-      .create((
-        <MasonryGrid
-          items={[...itemsMock]}
-          renderItem={renderItemMock}
-        />
-      ))
-      .toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('should be rendered correctly with 2 columns', () => {
-    const tree = renderer
-      .create((
-        <MasonryGrid
-          items={[...itemsMock]}
-          renderItem={renderItemMock}
-          columnsNum={2}
-        />
-      ))
-      .toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
   it('should be rendered correctly with 1 column', () => {
     const tree = renderer
       .create((
@@ -62,6 +35,34 @@ describe('MasonryGrid', () => {
           items={[...itemsMock]}
           renderItem={renderItemMock}
           columnsNum={1}
+        />
+      ))
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should be rendered correctly with 3 columns', () => {
+    const tree = renderer
+      .create((
+        <MasonryGrid
+          items={[...itemsMock]}
+          renderItem={renderItemMock}
+          columnsNum={3}
+        />
+      ))
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should be rendered correctly with 4 columns', () => {
+    const tree = renderer
+      .create((
+        <MasonryGrid
+          items={[...itemsMock]}
+          renderItem={renderItemMock}
+          columnsNum={4}
         />
       ))
       .toJSON();

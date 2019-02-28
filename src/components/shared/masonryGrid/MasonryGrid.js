@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const totalNumberOfColumns = 12;
+import { SUPPORTED_COLUMNS_NUMS, TOTAL_NUMBER_OF_LAYOUT_COLUMNS } from '../../../services/LayoutService';
 
 export class MasonryGrid extends React.Component {
   static propTypes = {
     renderItem: PropTypes.func.isRequired,
-    columnsNum: PropTypes.oneOf([1, 2, 3, 4, 6, 12]),
+    columnsNum: PropTypes.oneOf(SUPPORTED_COLUMNS_NUMS).isRequired,
     items: PropTypes.arrayOf(PropTypes.shape({
       height: PropTypes.number,
       content: PropTypes.object,
@@ -15,7 +14,6 @@ export class MasonryGrid extends React.Component {
 
   static defaultProps = {
     items: [],
-    columnsNum: 3,
   };
 
   render() {
@@ -45,7 +43,7 @@ export class MasonryGrid extends React.Component {
       /* eslint-disable react/no-array-index-key */
 
       // Calculate Bootstrap class depending on the columns num.
-      const columnClass = `col-${totalNumberOfColumns / columnsNum}`;
+      const columnClass = `col-${TOTAL_NUMBER_OF_LAYOUT_COLUMNS / columnsNum}`;
 
       // Generate column entities.
       const columnElements = partition.map(

@@ -1,39 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MasonryGrid should be rendered correctly by default 1`] = `
-<div
-  className="row"
->
-  <div
-    className="col-4"
-  >
-    <div>
-      Item #1
-    </div>
-    <div>
-      Item #4
-    </div>
-  </div>
-  <div
-    className="col-4"
-  >
-    <div>
-      Item #2
-    </div>
-  </div>
-  <div
-    className="col-4"
-  >
-    <div>
-      Item #3
-    </div>
-    <div>
-      Item #5
-    </div>
-  </div>
-</div>
-`;
-
 exports[`MasonryGrid should be rendered correctly with 1 column 1`] = `
 <div
   className="row"
@@ -60,16 +26,30 @@ exports[`MasonryGrid should be rendered correctly with 1 column 1`] = `
 </div>
 `;
 
-exports[`MasonryGrid should be rendered correctly with 2 columns 1`] = `
+exports[`MasonryGrid should be rendered correctly with 3 columns 1`] = `
 <div
   className="row"
 >
   <div
-    className="col-6"
+    className="col-4"
   >
     <div>
       Item #1
     </div>
+    <div>
+      Item #4
+    </div>
+  </div>
+  <div
+    className="col-4"
+  >
+    <div>
+      Item #2
+    </div>
+  </div>
+  <div
+    className="col-4"
+  >
     <div>
       Item #3
     </div>
@@ -77,12 +57,40 @@ exports[`MasonryGrid should be rendered correctly with 2 columns 1`] = `
       Item #5
     </div>
   </div>
+</div>
+`;
+
+exports[`MasonryGrid should be rendered correctly with 4 columns 1`] = `
+<div
+  className="row"
+>
   <div
-    className="col-6"
+    className="col-3"
+  >
+    <div>
+      Item #1
+    </div>
+    <div>
+      Item #5
+    </div>
+  </div>
+  <div
+    className="col-3"
   >
     <div>
       Item #2
     </div>
+  </div>
+  <div
+    className="col-3"
+  >
+    <div>
+      Item #3
+    </div>
+  </div>
+  <div
+    className="col-3"
+  >
     <div>
       Item #4
     </div>
