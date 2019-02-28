@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchViewTabsContainer should be hidden is it is required by properties 1`] = `null`;
+
+exports[`SearchViewTabsContainer should be rendered correctly by default 1`] = `
+<SearchViewTabs
+  columnsNum={3}
+  onColumnsNumbChange={[Function]}
+/>
+`;
+
+exports[`SearchViewTabsContainer should be rendered correctly with specified columns number 1`] = `
+<SearchViewTabs
+  columnsNum={4}
+  onColumnsNumbChange={[Function]}
+/>
+`;
