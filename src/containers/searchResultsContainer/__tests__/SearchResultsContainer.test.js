@@ -28,6 +28,17 @@ describe('SearchResultsContainer', () => {
     expect(searchMore).not.toHaveBeenCalled();
   });
 
+  it('should be rendered correctly with custom columns num', () => {
+    const searchMore = jest.fn();
+
+    const testElement = renderer.create((
+      <SearchResultsContainer searchMore={searchMore} columnsNum={4} />
+    ));
+
+    expect(testElement.toJSON()).toMatchSnapshot();
+    expect(searchMore).not.toHaveBeenCalled();
+  });
+
   it('should fire searchMore callback', () => {
     const searchMore = jest.fn();
 
