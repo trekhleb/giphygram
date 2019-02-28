@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutContainer should be rendered correctly by default with one child 1`] = `
+<Layout
+  onMediaQueryChange={[Function]}
+>
+  <div>
+    Child
+  </div>
+</Layout>
+`;
+
+exports[`LayoutContainer should be rendered correctly by default with several children 1`] = `
+<Layout
+  onMediaQueryChange={[Function]}
+>
+  <div>
+    Child #1
+  </div>
+  <div>
+    Child #2
+  </div>
+</Layout>
+`;
