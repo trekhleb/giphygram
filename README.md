@@ -53,19 +53,4 @@ This command will create a production build of the project and will commit and p
 
 ## Project Continuous Integration
 
-Current project is integrated with [Travis](https://travis-ci.org/trekhleb/giphygram) and [Codecov](https://codecov.io/gh/trekhleb/giphygram) services. Travis service launches project build and tests for every new commit and pull request to make sure that things are not broken. Codecov service reports code coverage percentage to see how reliable and stable the process of development is. 
-
-## ToDo
-
-This list contains the next steps for further project development that have not been completed yet because of limited time that was dedicated to this project.
-
-- [x] Reset search results by clicking on reset button.
-- [x] Increase code coverage closer to 100% to increase code stability.
-- [x] Add multi-environment support using environment variables.
-- [x] Reflect search params in the URL to be able to send the link to a friend with predefined search.
-- [x] Switch to 3-columns views automatically on wide screens.
-- [ ] Optimize displaying of huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
-- [ ] Setup gif placeholders size in advance in order to avoid image "jumps".
-- [ ] Implement HTTP requests error handling.
-- [ ] Show most trending GIFs on the home page.
-- [ ] Add "NPM dependencies" badge to the README in order to see outdated packages.
+Current project is integrated with [Travis](https://travis-ci.org/trekhleb/giphygram) and [Codecov](https://codecov.io/gh/trekhleb/giphygram) services. Travis service launches project build and tests for every new commit and pull request to make sure that things are not broken. Codecov service reports code coverage percentage to see how reliable and stable the process of development is.
