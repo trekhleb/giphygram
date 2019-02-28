@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchViewTabs should be rendered correctly by default 1`] = `
+<div
+  className="btn-group btn-group-sm mb-3"
+>
+  <button
+    className="btn btn-light tab-selector-button"
+    onClick={[Function]}
+    title="Show in 1 column"
+    type="button"
+  >
+    <span
+      className="oi oi-list"
+    />
+  </button>
+  <button
+    className="btn btn-dark tab-selector-button"
+    onClick={[Function]}
+    title="Show in 3 columns"
+    type="button"
+  >
+    <span
+      className="oi oi-grid-three-up"
+    />
+  </button>
+  <button
+    className="btn btn-light tab-selector-button"
+    onClick={[Function]}
+    title="Show in 4 columns"
+    type="button"
+  >
+    <span
+      className="oi oi-grid-four-up"
+    />
+  </button>
+</div>
+`;

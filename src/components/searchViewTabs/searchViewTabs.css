@@ -1,0 +1,4 @@
+.tab-selector-button:focus {
+  border-color: #cccccc;
+  box-shadow: 0 0 0 0.15rem rgba(200, 200, 200, .25)
+}
