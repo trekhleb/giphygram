@@ -3,6 +3,7 @@
 exports[`LayoutContainer should be rendered correctly by default with one child 1`] = `
 <Layout
   onMediaQueryChange={[Function]}
+  onMediaQueryInit={[Function]}
 >
   <div>
     Child
@@ -13,6 +14,7 @@ exports[`LayoutContainer should be rendered correctly by default with one child 
 exports[`LayoutContainer should be rendered correctly by default with several children 1`] = `
 <Layout
   onMediaQueryChange={[Function]}
+  onMediaQueryInit={[Function]}
 >
   <div>
     Child #1

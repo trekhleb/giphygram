@@ -22,7 +22,10 @@ export class LayoutContainer extends React.Component {
     const { children } = this.props;
 
     return (
-      <Layout onMediaQueryChange={this.onMediaQueryChange}>
+      <Layout
+        onMediaQueryChange={this.onMediaQueryChange}
+        onMediaQueryInit={this.onMediaQueryChange}
+      >
         {children}
       </Layout>
     );

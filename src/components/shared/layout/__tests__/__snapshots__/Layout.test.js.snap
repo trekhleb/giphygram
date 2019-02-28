@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render more than one child component inside the layout 1`] = `
+exports[`Layout should render more than one child component inside the layout 1`] = `
 <div
   className="container"
 >
@@ -21,7 +21,7 @@ exports[`should render more than one child component inside the layout 1`] = `
 </div>
 `;
 
-exports[`should render one child component inside the layout 1`] = `
+exports[`Layout should render one child component inside the layout 1`] = `
 <div
   className="container"
 >

@@ -2,6 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SCREEN_SIZES } from '../../../services/LayoutService';
 
+// Closure callback that fires when media has been changed.
+const onMediaQueryChangeCallback = (screenSize, callback) => (e) => {
+  if (e.matches) {
+    callback(screenSize.id);
+  }
+};
+
 export class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.oneOfType([
@@ -9,10 +16,12 @@ export class Layout extends React.Component {
       PropTypes.node,
     ]).isRequired,
     onMediaQueryChange: PropTypes.func,
+    onMediaQueryInit: PropTypes.func,
   };
 
   static defaultProps = {
     onMediaQueryChange: () => {},
+    onMediaQueryInit: () => {},
   };
 
   constructor(props) {
@@ -23,7 +32,7 @@ export class Layout extends React.Component {
   }
 
   componentDidMount() {
-    const { onMediaQueryChange } = this.props;
+    const { onMediaQueryChange, onMediaQueryInit } = this.props;
     let initialScreenSize = null;
 
     Object
@@ -37,16 +46,12 @@ export class Layout extends React.Component {
 
         // Subscribe to media query changes.
         this.mediaQueries[screenSize.id].addListener(
-          (screenSizeEntity => (e) => {
-            if (e.matches) {
-              onMediaQueryChange(screenSizeEntity.id);
-            }
-          })(screenSize),
+          onMediaQueryChangeCallback(screenSize, onMediaQueryChange),
         );
       });
 
     // Setup initial media query match.
-    onMediaQueryChange(initialScreenSize.id);
+    onMediaQueryInit(initialScreenSize.id);
   }
 
   // @TODO: Remove media query listeners on component unmount.
