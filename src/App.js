@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { Layout } from './components/shared/layout/Layout';
 import RoutesConnected from './Routes';
 import { Header } from './components/shared/header/Header';
 import { storePropType } from './types/reduxTypes';
 import { APP_BASE_URL } from './config';
 import 'open-iconic/font/css/open-iconic-bootstrap.min.css';
+import LayoutContainerConnected from './containers/layoutContainer/LayoutContainer';
 
 export class App extends React.Component {
   static propTypes = {
@@ -19,10 +19,10 @@ export class App extends React.Component {
     return (
       <Provider store={store}>
         <BrowserRouter basename={APP_BASE_URL}>
-          <Layout>
+          <LayoutContainerConnected>
             <Header />
             <RoutesConnected />
-          </Layout>
+          </LayoutContainerConnected>
         </BrowserRouter>
       </Provider>
     );
