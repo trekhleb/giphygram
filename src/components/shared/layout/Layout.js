@@ -49,9 +49,10 @@ export class Layout extends React.Component {
     onMediaQueryChange(initialScreenSize.id);
   }
 
-  componentWillUnmount() {
-    Object.values(this.mediaQueries).forEach(mediaQuery => mediaQuery.removeListener());
-  }
+  // @TODO: Remove media query listeners on component unmount.
+  // componentWillUnmount() {
+  //   Object.values(this.mediaQueries).forEach(mediaQuery => mediaQuery.removeListener());
+  // }
 
   render() {
     const { children } = this.props;
