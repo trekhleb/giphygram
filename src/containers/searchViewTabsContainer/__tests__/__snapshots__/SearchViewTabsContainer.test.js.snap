@@ -2,6 +2,13 @@
 
 exports[`SearchViewTabsContainer should be hidden is it is required by properties 1`] = `null`;
 
+exports[`SearchViewTabsContainer should be rendered and connected correctly by default 1`] = `
+<SearchViewTabs
+  columnsNum={3}
+  onColumnsNumChange={[Function]}
+/>
+`;
+
 exports[`SearchViewTabsContainer should be rendered correctly by default 1`] = `
 <SearchViewTabs
   columnsNum={3}
