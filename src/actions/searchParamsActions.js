@@ -3,7 +3,10 @@ export const SEARCH_PARAMS_ACTION_TYPES = {
   UPDATE_SEARCH_OFFSET: 'UPDATE_SEARCH_OFFSET',
 };
 
-// Update the value of search query.
+/**
+ * Update the value of search query.
+ * @param {string} searchQuery
+ */
 export function updateSearchQuery(searchQuery) {
   return {
     type: SEARCH_PARAMS_ACTION_TYPES.UPDATE_SEARCH_QUERY,
@@ -11,7 +14,10 @@ export function updateSearchQuery(searchQuery) {
   };
 }
 
-// Update current search offset.
+/**
+ * Update current search offset.
+ * @param {number} offset
+ */
 export function updateSearchOffset(offset) {
   return {
     type: SEARCH_PARAMS_ACTION_TYPES.UPDATE_SEARCH_OFFSET,

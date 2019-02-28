@@ -10,7 +10,10 @@ export const SEARCH_ACTION_TYPES = {
   SEARCH_RESET: 'SEARCH_RESET',
 };
 
-// Search on GIPHY.
+/**
+ * Search on GIPHY.
+ * @param {object} searchParams
+ */
 export function search(searchParams) {
   return {
     type: SEARCH_ACTION_TYPES.SEARCH,
@@ -26,7 +29,10 @@ export function searchReset() {
   };
 }
 
-// Fetch more search results from GIPHY.
+/**
+ * Fetch more search results from GIPHY.
+ * @param {number} batchSize
+ */
 export function searchMore(batchSize = SEARCH_BATCH_SIZE) {
   return (dispatch, getState) => {
     const state = getState();
