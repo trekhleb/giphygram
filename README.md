@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.org/trekhleb/giphygram.svg?branch=master)](https://travis-ci.org/trekhleb/giphygram)
 [![codecov](https://codecov.io/gh/trekhleb/giphygram/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/giphygram)
 
-[▶︎ Launch Demo](https://trekhleb.github.io/giphygram/)
-
 > This project is a front-end React application that serves a sole purpose of searching GIF images on [GIHPY.com](https://giphy.com/) using GIPHY [Search API](https://developers.giphy.com/docs/#search-endpoint). The project is implemented using **React** (as a main UI library), **Redux** (for state management), **React Router** (to establish a possibility to extend the application with new internal routes and pages) and **Bootstrap 4** (as a main styling framework).
 
 ## Launching the Project
