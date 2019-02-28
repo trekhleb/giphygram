@@ -63,7 +63,7 @@ This list contains the next steps for further project development that have not 
 - [x] Increase code coverage closer to 100% to increase code stability.
 - [x] Add multi-environment support using environment variables.
 - [x] Reflect search params in the URL to be able to send the link to a friend with predefined search.
-- [ ] Switch to 3-columns views automatically on wide screens.
+- [x] Switch to 3-columns views automatically on wide screens.
 - [ ] Implement HTTP requests error handling.
 - [ ] Optimize huge amount of GIFs (by either using smaller or downsampled or still GIF images) to make it easier for the browser to render them.
 - [ ] Show most trending GIFs on the home page.
