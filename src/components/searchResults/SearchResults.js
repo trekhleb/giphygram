@@ -3,18 +3,19 @@ import PropTypes from 'prop-types';
 import { SearchItem } from '../searchItem/SearchItem';
 import { Spinner } from '../shared/spinner/Spinner';
 import { MasonryGrid } from '../shared/masonryGrid/MasonryGrid';
+import { DEFAULT_COLUMNS_NUM, SUPPORTED_COLUMNS_NUMS } from '../../services/LayoutService';
 
 export class SearchResults extends React.Component {
   static propTypes = {
     searchItems: PropTypes.arrayOf(PropTypes.object),
     isLoading: PropTypes.bool,
-    columnsNum: PropTypes.oneOf([1, 2, 3, 4, 6, 12]),
+    columnsNum: PropTypes.oneOf(SUPPORTED_COLUMNS_NUMS),
   };
 
   static defaultProps = {
     searchItems: [],
     isLoading: false,
-    columnsNum: 3,
+    columnsNum: DEFAULT_COLUMNS_NUM,
   };
 
   renderSearchItem = searchItem => (
