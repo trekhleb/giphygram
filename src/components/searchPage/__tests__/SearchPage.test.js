@@ -9,7 +9,12 @@ jest.mock(
 
 jest.mock(
   '../../../containers/searchSummaryContainer/SearchSummaryContainer',
-  () => 'searchSummaryContainer',
+  () => 'SearchSummaryContainer',
+);
+
+jest.mock(
+  '../../../containers/searchViewTabsContainer/SearchViewTabsContainer',
+  () => 'SearchViewTabsContainer',
 );
 
 describe('SearchPage', () => {
